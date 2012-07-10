@@ -1,0 +1,72 @@
+<!--
+Copyright (c) 2012, Jaken
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+ are permitted provided that the following conditions are met:
+Redistributions of source code must retain the above copyright notice, this list
+ of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this
+ list of conditions and the following disclaimer in the documentation and/or
+ other materials provided with the distribution.
+Neither the name of the Jaken's laboratory nor the names of its contributors may
+ be used to endorse or promote products derived from this software without
+ specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<resources>
+    <string name="app_name">ShowServiceMode For Galaxy LTE</string>
+    <string name="title_activity_main">ShowServiceMode</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="nothing_title">処理なし</string>
+    <string name="nothing_subtitle">何も実行しません。</string>
+    <string name="broadcast01_title">直接呼出し Type01</string>
+    <string name="broadcast01_subtitle">ServiceModeの画面を直接呼び出します。もっともスマートに呼び出すことができますが、動作する機種が限定されます。（主にSC-03D用）ただし、SC-05Dなどの新しい機種では制限がかかっているため、将来実行できなくなる可能性があります。</string>
+    <string name="dial2263_01_title">ダイアル*#2263# Type01</string>
+    <string name="dial2263_01_subtitle">ダイアルアプリに対して*#2263#を発呼します。同コマンドで隠し画面が出るタイプなら動作する可能性が高いです。終了時にダイアルアプリが表示されてしまうことが欠点です。</string>
+    <string name="dial197328640_01_title">ダイアル*#197328640# Type01</string>
+    <string name="dial197328640_01_subtitle">ダイアルアプリに対して*#197328640#を発呼します。同コマンドで隠し画面が出るタイプなら動作する可能性が高いです。終了時にダイアルアプリが表示されてしまうことが欠点です。</string>
+    <string name="radioinfo_title">端末情報画面呼び出し</string>
+    <string name="radioinfo_subtitle">端末情報画面を呼び出します。機種によっては、この画面の「優先ネットワークタイプの設定」を切り替えることによって、LTEのOn/Offができる場合があります。また、その他の切り替え方法で切り替えた場合も、この表示で確認できる場合があります。</string>
+    <string name="dialfreenumber_title">ダイアル自由設定（未実装）</string>
+    <string name="dialfreenumber_subtitle">ダイアルアプリに対して、利用者が設定した番号を発呼します。（現在未実装のため、何も起きません）</string>
+
+    <string name="AskYou">お願い</string>
+    <string name="WillAskYouToProvideInformation">お使いのShowServiceModeは、情報提供者向け無料版です。動作報告や不具合などの情報提供をお願いいたします。</string>
+    
+    <string name="notes">注意事項</string>
+    <string name="disclaimer">設定を変更したことによる動作不良やトラブルには、作者は一切責任を持ちません。自己責任でのご利用をお願いします。また、メイン画面以外の画面は、ShowServiceModeアプリの画面ではありません。「隠された画面を出す」という性質上、本来「利用者が設定を変更すべきでない」ことも理解した上でご利用ください。</string>
+    <string name="use_default_settings">標準設定を使う</string>
+    <string name="button_execute_showservicemode">\n上記設定で呼び出し実行\n</string>
+
+    <string name="shortcut_message">ショートカットを作成すると、ホームからワンタッチで画面を開けるようになります。異なる呼び出し方法で複数作ることもできます。</string>
+    <string name="button_create_shortcut">上記設定でホームにショートカット作成</string>
+    <string name="basic_information">Information\n動作状況報告やトラブルが発生した場合は、以下の情報をお知らせ頂くと、解決が早まる場合があります。（ここをタップするとクリップボードにコピーし、情報提供ページを開きます）\n</string>
+    <string name="please_select_from_following_processing_types">処理タイプを以下から選択して下さい。</string>
+    <string name="enter_name_of_shortcut">ショートカット名の入力</string>
+    <string name="when_you_press_ok_button_without_entering_with_an_automatically_generated_name">入力せずにOKボタンを押すと、自動生成された名前が付きます。</string>
+
+    <string name="description">ShowServiceModeは、標準で用意されている「隠し画面」を素早く呼び出すためのアプリです。お使いの機種で正常に呼び出せるかどうかにかかわらず、複数の呼び出し方法を実装しています。</string>
+    <string name="description_other">説明(対象外機種):\nご使用の機種では、ShowServiceModeが正しく動作しない可能性があります。ご自身で動作を確認のうえご使用ください。</string>
+    <string name="description_sc03d">説明(SC-03D):\n「直接呼出し Type01」の使用をお勧めします。ただし、GALAXY Note SC-05Dでは既に制限がかかっており、今後のSC-03Dのシステムアップデートにより制限がかかる可能性があります。この呼び出しが動作しなくなった場合は、「ダイアル*#2263# Type01」をお試しください。</string>
+    <string name="description_sc05d">説明(SC-05D):\n「ダイアル*#2263# Type01」の使用をお勧めします。また、SC-05Dでは「直接呼出し Type01」が動作しないことを確認しております。（システムアプリのみ直接呼出しが可能なようにセキュリティが強化されているため）</string>
+    <string name="description_sc06d">説明(SC-06D):\n「ダイアル*#197328640# Type01」の使用をお勧めします。LTEをOFFにしても勝手にONへ戻る状態が報告されており、動作が安定しない可能性があります。</string>
+    <string name="description_sc01d">説明(SC-01D):\n開発者は動作未確認です。「ダイアル*#2263# Type01」は動作すると思われます。場合によっては「直接呼出し Type01」が動作する可能性もありますので、お試しください。（是非、動作状況をご連絡ください）</string>
+
+    <string name="error_detection">エラーを検知しました。</string>
+    <string name="error_detection_message">大変申し訳ありませんが、お使いの機種では、この呼び出し方法が使えないようです。他の呼び出し方法をお試しください。</string>
+
+    <string name="clipboard_message">クリップボードにコピーしました</string>
+
+    <string name="debug_signature">308201e53082014ea00302010202044f37e213300d06092a864886f70d01010505003037310b30090603550406130255533110300e060355040a1307416e64726f6964311630140603550403130d416e64726f6964204465627567301e170d3132303231323136303031395a170d3432303230343136303031395a3037310b30090603550406130255533110300e060355040a1307416e64726f6964311630140603550403130d416e64726f696420446562756730819f300d06092a864886f70d010101050003818d003081890281810094f964853fe8acfbc7ce872a600fe1e2d6447becc9cf54c511c63b32ed72a16369255dcab8608cac3a5f4e789a71be4c3bb029670442c5fd0e8f6575ab633bb025620da13389b6345057c837509c946799a7d8b4f03d05ccc60e15d03dfcc3aabfff66fc0343e0a4af442b7047c7bb2222253711d5f79fd979267de9a6859d8b0203010001300d06092a864886f70d0101050500038181000fb14dae2c91598e360cb97fee61b7434704fb6c51e707b7f6fe2a71780ef12a46f865cd5346ca85aaefe58af36eb5b37acc920200b986f65a9caddefd33f3d41fc7329d51d4774c11037ef5f21b39276f2e5225c2f22589e6afff68964b3c5beecad48dcd39f65269a078aceed95fed10fecdc308daf14e4a40b22a9c6ea310</string>
+</resources>
