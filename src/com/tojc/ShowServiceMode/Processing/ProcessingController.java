@@ -77,9 +77,16 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 		
 		this.trimToSize();
 
+		String edition = "";
+        this.signaturechecker = new SignatureChecker(parent);
+        if(this.isDebugSignature())
+        {
+        	edition = "Free";
+        }
+
         try
         {
-        	this.ShowServiceModeVersion = parent.getPackageManager().getPackageInfo(parent.getPackageName(), 0).versionName;
+        	this.ShowServiceModeVersion = parent.getPackageManager().getPackageInfo(parent.getPackageName(), 0).versionName + " " + edition;
         }
         catch (NameNotFoundException e)
         {
@@ -97,8 +104,6 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 
         this.os = OsMajorVersion.toOsMajorVersion(this.version);
         Log.d(this.getClass().getSimpleName(),"OsMajorVersion: " + this.os);
-
-        this.signaturechecker = new SignatureChecker(parent);
 
         setInstanceById(getDefaultProcessingTypeId());
 	}
