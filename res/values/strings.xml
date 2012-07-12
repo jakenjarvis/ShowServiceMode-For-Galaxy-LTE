@@ -36,6 +36,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
     <string name="dial2263_01_subtitle">ダイアルアプリに対して*#2263#を発呼します。同コマンドで隠し画面が出るタイプなら動作する可能性が高いです。終了時にダイアルアプリが表示されてしまうことが欠点です。</string>
     <string name="dial197328640_01_title">ダイアル*#197328640# Type01</string>
     <string name="dial197328640_01_subtitle">ダイアルアプリに対して*#197328640#を発呼します。同コマンドで隠し画面が出るタイプなら動作する可能性が高いです。終了時にダイアルアプリが表示されてしまうことが欠点です。</string>
+    <string name="dial197328640_02_title">ダイアル*#197328640# Type02</string>
+    <string name="dial197328640_02_subtitle">ダイアルアプリに対して*#197328640を発呼します。SC-06Dの「ダイアル*#197328640# Type01」で呼び出せない問題が解決するまでの回避用です。最後の#のみ手打ちする必要があります。</string>
     <string name="radioinfo_title">端末情報画面呼び出し</string>
     <string name="radioinfo_subtitle">端末情報画面を呼び出します。機種によっては、この画面の「優先ネットワークタイプの設定」を切り替えることによって、LTEのOn/Offができる場合があります。また、その他の切り替え方法で切り替えた場合も、この表示で確認できる場合があります。</string>
     <string name="dialfreenumber_title">ダイアル自由設定（未実装）</string>

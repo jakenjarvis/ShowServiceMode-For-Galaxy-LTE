@@ -26,7 +26,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tojc.ShowServiceMode"
     android:versionCode="4"
-    android:versionName="3.1.0" >
+    android:versionName="3.0.1" >
 
     <uses-sdk
         android:minSdkVersion="10"

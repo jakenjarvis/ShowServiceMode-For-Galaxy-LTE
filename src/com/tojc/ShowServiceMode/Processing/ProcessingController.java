@@ -40,6 +40,7 @@ import com.tojc.ShowServiceMode.Enum.OsMajorVersion;
 import com.tojc.ShowServiceMode.Enum.ProcessingTypeId;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingBroadcast01;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingDial197328640_01;
+import com.tojc.ShowServiceMode.ProcessingType.ProcessingDial197328640_02;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingDial2263_01;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingDialFreeNumber;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingNothing;
@@ -70,6 +71,7 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 		this.add(new ProcessingNothing(parent, ProcessingTypeId.NOTHING));
 		this.add(new ProcessingDial2263_01(parent, ProcessingTypeId.DIAL2263_01));
 		this.add(new ProcessingDial197328640_01(parent, ProcessingTypeId.DIAL197328640_01));
+		this.add(new ProcessingDial197328640_02(parent, ProcessingTypeId.DIAL197328640_02));
 		this.add(new ProcessingBroadcast01(parent, ProcessingTypeId.BROADCAST_01));
 		this.add(new ProcessingRadioInfo(parent, ProcessingTypeId.RADIOINFO));
 		this.add(new ProcessingDialFreeNumber(parent, ProcessingTypeId.DIALFREENUMBER));

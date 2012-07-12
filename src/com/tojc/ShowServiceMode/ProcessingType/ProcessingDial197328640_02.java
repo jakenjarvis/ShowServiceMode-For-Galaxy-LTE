@@ -23,42 +23,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-package com.tojc.ShowServiceMode.Enum;
+package com.tojc.ShowServiceMode.ProcessingType;
 
-public enum ProcessingTypeId
+import android.app.Activity;
+
+import com.tojc.ShowServiceMode.R;
+import com.tojc.ShowServiceMode.Enum.ProcessingTypeId;
+import com.tojc.ShowServiceMode.Processing.ProcessingDialBase;
+
+public class ProcessingDial197328640_02 extends ProcessingDialBase
 {
-	NOTHING("NOTHING"),
-	DIAL2263_01("DIAL2263_01"),
-	DIAL197328640_01("DIAL197328640_01"),
-	DIAL197328640_02("DIAL197328640_02"),
-	BROADCAST_01("BROADCAST_01"),
-	RADIOINFO("RADIOINFO"),
-	DIALFREENUMBER("DIALFREENUMBER");
-
-	private ProcessingTypeId(String name)
+	public ProcessingDial197328640_02(Activity parent, ProcessingTypeId processingTypeId)
 	{
-		this.name = name;
+		super(parent, 
+				processingTypeId,
+				parent.getString(R.string.dial197328640_02_title),
+				parent.getString(R.string.dial197328640_02_subtitle),
+				R.drawable.ic_shortcut
+				);
+		this.dialnumber = "*#197328640";
 	}
 
-	private final String name;
-
-	@Override
-	public String toString()
-	{
-		return this.name;
-	}
-
-	public static ProcessingTypeId toProcessingTypeId(String name)
-	{
-		ProcessingTypeId result = NOTHING;
-        for (ProcessingTypeId model : values())
-        {
-            if (model.toString().equals(name))
-            {
-                result = model;
-                break;
-            }
-        }
-        return result;
-    }
 }
