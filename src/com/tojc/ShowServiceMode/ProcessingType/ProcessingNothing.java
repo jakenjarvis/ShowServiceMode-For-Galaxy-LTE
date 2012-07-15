@@ -25,9 +25,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 */
 package com.tojc.ShowServiceMode.ProcessingType;
 
-import java.util.HashMap;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import com.tojc.ShowServiceMode.R;
@@ -53,14 +50,14 @@ public class ProcessingNothing extends ProcessingBase
 	}
 
 	@Override
-	public void ExecuteShowServiceMode(Activity parent, List<HashMap<String, Object>> list)
-	{
-	}
-
-	@Override
 	protected Intent CreateIntent()
 	{
 		return null;
+	}
+
+	@Override
+	protected void ExecuteShowServiceMode(Activity parent, Intent intent)
+	{
 	}
 
 }

@@ -85,8 +85,26 @@ public abstract class ProcessingBase
 		return this.processingTypeId.toString();
 	}
 
-	public abstract void ExecuteShowServiceMode(Activity parent, List<HashMap<String, Object>> list);
+	public void Execute(Activity parent, List<HashMap<String, Object>> list)
+	{
+        Log.d(this.getClass().getSimpleName(),"Execute Start:" + this.toString());
+		try
+		{
+			Intent intent = CreateIntent();
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			ExecuteShowServiceMode(parent, intent);
+		}
+		catch(Exception e)
+		{
+	        Log.e(this.getClass().getSimpleName(),"Failed to Dial", e);
+	        Intent intent = CreateMainActivityIntent(e.getStackTrace().toString());
+			this.parent.startActivity(intent);
+		}
+        Log.d(this.getClass().getSimpleName(),"Execute End:" + this.toString());
+	}
+
 	protected abstract Intent CreateIntent();
+	protected abstract void ExecuteShowServiceMode(Activity parent, Intent intent);
 
 
 	protected Intent CreateMainActivityIntent(String message)

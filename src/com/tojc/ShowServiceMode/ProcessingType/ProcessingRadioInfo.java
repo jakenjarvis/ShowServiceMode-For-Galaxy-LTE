@@ -25,14 +25,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 */
 package com.tojc.ShowServiceMode.ProcessingType;
 
-import java.util.HashMap;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.util.Log;
-
 import com.tojc.ShowServiceMode.R;
 import com.tojc.ShowServiceMode.Enum.ProcessingTypeId;
 import com.tojc.ShowServiceMode.Processing.ProcessingBase;
@@ -56,30 +51,18 @@ public class ProcessingRadioInfo extends ProcessingBase
 	}
 
 	@Override
-	public void ExecuteShowServiceMode(Activity parent, List<HashMap<String, Object>> list)
-	{
-        Log.d(this.getClass().getSimpleName(),"ExecuteShowServiceMode Start:" + this.toString());
-		try
-		{
-			Intent intent = CreateIntent();
-			parent.startActivity(intent);
-		}
-		catch(Exception e)
-		{
-	        Log.e(this.getClass().getSimpleName(),"Failed to startActivity", e);
-	        Intent intent = CreateMainActivityIntent(e.getStackTrace().toString());
-			this.parent.startActivity(intent);
-		}
-        Log.d(this.getClass().getSimpleName(),"ExecuteShowServiceMode End:" + this.toString());
-	}
-
-	@Override
 	protected Intent CreateIntent()
 	{
 		Intent result = new Intent(Intent.ACTION_MAIN);
 		ComponentName localComponentName = new ComponentName("com.android.settings", "com.android.settings.RadioInfo");
 		result.setComponent(localComponentName);
         return result;
+	}
+
+	@Override
+	protected void ExecuteShowServiceMode(Activity parent, Intent intent)
+	{
+		parent.startActivity(intent);
 	}
 
 }

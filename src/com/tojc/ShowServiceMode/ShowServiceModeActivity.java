@@ -60,7 +60,7 @@ public class ShowServiceModeActivity extends Activity
 
         	if(this.pController.getInstance().getProcessingTypeId() != ProcessingTypeId.NOTHING)
         	{
-            	this.pController.getInstance().ExecuteShowServiceMode(this, null);
+            	this.pController.getInstance().Execute(this, null);
         	}
         }
 		finish();

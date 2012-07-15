@@ -25,20 +25,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 */
 package com.tojc.ShowServiceMode.Processing;
 
-import java.util.HashMap;
-import java.util.List;
-
 import com.tojc.ShowServiceMode.Enum.ProcessingTypeId;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.app.Activity;
 
 public abstract class ProcessingDialBase extends ProcessingBase
 {
-	protected final String uriencodeSharp = Uri.encode("#");
-
 	protected String dialnumber;
 	
 	public ProcessingDialBase(Activity parent, ProcessingTypeId processingTypeId, String title, String subtitle, int shortcutid)
@@ -53,32 +47,15 @@ public abstract class ProcessingDialBase extends ProcessingBase
 	}
 
 	@Override
-	public void ExecuteShowServiceMode(Activity parent, List<HashMap<String, Object>> list)
+	protected Intent CreateIntent()
 	{
-        Log.d(this.getClass().getSimpleName(),"ExecuteShowServiceMode Start:" + this.toString());
-		try
-		{
-			Intent intent = CreateIntent();
-			parent.startActivity(intent);
-		}
-		catch(Exception e)
-		{
-	        Log.e(this.getClass().getSimpleName(),"Failed to Dial", e);
-	        Intent intent = CreateMainActivityIntent(e.getStackTrace().toString());
-			this.parent.startActivity(intent);
-		}
-        Log.d(this.getClass().getSimpleName(),"ExecuteShowServiceMode End:" + this.toString());
+		return new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", this.dialnumber, null));
 	}
 
 	@Override
-	protected Intent CreateIntent()
+	protected void ExecuteShowServiceMode(Activity parent, Intent intent)
 	{
-		String tel = this.dialnumber.replaceAll("#", uriencodeSharp);
-
-		Intent result = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + tel));
-		//result.setClassName("com.sec.android.app.contacts", "com.sec.android.app.contacts.PhoneBookTopMenuActivity");
-		//result.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		return result;
+		parent.startActivity(intent);
 	}
 
 }

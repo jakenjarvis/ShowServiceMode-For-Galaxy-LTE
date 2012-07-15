@@ -25,15 +25,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 */
 package com.tojc.ShowServiceMode.Processing;
 
-import java.util.HashMap;
-import java.util.List;
-
 import com.tojc.ShowServiceMode.Enum.ProcessingTypeId;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 
 public class ProcessingBroadcastBase extends ProcessingBase
 {
@@ -52,27 +48,14 @@ public class ProcessingBroadcastBase extends ProcessingBase
 	}
 
 	@Override
-	public void ExecuteShowServiceMode(Activity parent, List<HashMap<String, Object>> list)
-	{
-        Log.d(this.getClass().getSimpleName(),"ExecuteShowServiceMode Start:" + this.toString());
-		try
-		{
-			Intent intent = CreateIntent();
-			parent.sendBroadcast(intent);
-		}
-		catch(Exception e)
-		{
-	        Log.e(this.getClass().getSimpleName(),"Failed to Broadcast", e);
-	        Intent intent = CreateMainActivityIntent(e.getStackTrace().toString());
-			this.parent.startActivity(intent);
-		}
-        Log.d(this.getClass().getSimpleName(),"ExecuteShowServiceMode End:" + this.toString());
-	}
-
-	@Override
 	protected Intent CreateIntent()
 	{
 		return new Intent(this.action, Uri.parse(this.uri));
 	}
 
+	@Override
+	protected void ExecuteShowServiceMode(Activity parent, Intent intent)
+	{
+		parent.sendBroadcast(intent);
+	}
 }

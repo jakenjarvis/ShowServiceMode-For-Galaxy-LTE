@@ -25,15 +25,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tojc.ShowServiceMode"
-    android:versionCode="4"
-    android:versionName="3.0.1" >
+    android:versionCode="5"
+    android:versionName="3.1.0" >
 
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="15" />
 
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-	<!--
+    <uses-permission android:name="com.sec.android.app.servicemodeapp.permission.KEYSTRING" />
+    <!--
     <uses-permission android:name="android.permission.GET_TASKS"/>
 	-->
 
@@ -50,6 +51,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ShowServiceModeActivity"
             android:label="@string/app_name"
@@ -61,6 +63,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
                 -->
             </intent-filter>
         </activity>
+
         <activity
             android:name=".CreateShortcutActivity"
             android:label="@string/title_activity_main"

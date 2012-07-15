@@ -30,14 +30,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 
     <string name="nothing_title">処理なし</string>
     <string name="nothing_subtitle">何も実行しません。</string>
-    <string name="broadcast01_title">直接呼出し Type01</string>
-    <string name="broadcast01_subtitle">ServiceModeの画面を直接呼び出します。もっともスマートに呼び出すことができますが、動作する機種が限定されます。（主にSC-03D用）ただし、SC-05Dなどの新しい機種では制限がかかっているため、将来実行できなくなる可能性があります。</string>
     <string name="dial2263_01_title">ダイアル*#2263# Type01</string>
     <string name="dial2263_01_subtitle">ダイアルアプリに対して*#2263#を発呼します。同コマンドで隠し画面が出るタイプなら動作する可能性が高いです。終了時にダイアルアプリが表示されてしまうことが欠点です。</string>
     <string name="dial197328640_01_title">ダイアル*#197328640# Type01</string>
     <string name="dial197328640_01_subtitle">ダイアルアプリに対して*#197328640#を発呼します。同コマンドで隠し画面が出るタイプなら動作する可能性が高いです。終了時にダイアルアプリが表示されてしまうことが欠点です。</string>
-    <string name="dial197328640_02_title">ダイアル*#197328640# Type02</string>
-    <string name="dial197328640_02_subtitle">ダイアルアプリに対して*#197328640を発呼します。SC-06Dの「ダイアル*#197328640# Type01」で呼び出せない問題が解決するまでの回避用です。最後の#のみ手打ちする必要があります。</string>
+    <string name="dial197328640_02_title">ダイアル*#197328640# Type02[廃止予定]</string>
+    <string name="dial197328640_02_subtitle">ダイアルアプリに対して*#197328640を発呼します。SC-06Dの「ダイアル*#197328640# Type01」で呼び出せない問題が解決するまでの回避用です。最後の#のみ手打ちする必要があります。この呼び出し方法は回避用のため、将来廃止する予定です。</string>
+    <string name="broadcast01_title">直接呼出し Type01[旧式]</string>
+    <string name="broadcast01_subtitle">ServiceModeの画面を直接呼び出します。もっともスマートに呼び出すことができますが、動作する機種が限定されます。（主にSC-03D用）ただし、SC-05Dなどの新しい機種では制限がかかっているため、将来実行できなくなる可能性があります。</string>
+    <string name="directlycall2263_01_title">直接2263呼出し Type01</string>
+    <string name="directlycall2263_01_subtitle">*#2263#用のServiceMode画面を直接呼び出します。もっともスマートに呼び出すことができます。（主にSC-03D、SC-05D用）</string>
+    <string name="directlycall197328640_01_title">直接197328640呼出し Type01</string>
+    <string name="directlycall197328640_01_subtitle">*#197328640#用のServiceMode画面を直接呼び出します。もっともスマートに呼び出すことができます。（主にSC-06D用）</string>
     <string name="radioinfo_title">端末情報画面呼び出し</string>
     <string name="radioinfo_subtitle">端末情報画面を呼び出します。機種によっては、この画面の「優先ネットワークタイプの設定」を切り替えることによって、LTEのOn/Offができる場合があります。また、その他の切り替え方法で切り替えた場合も、この表示で確認できる場合があります。</string>
     <string name="dialfreenumber_title">ダイアル自由設定（未実装）</string>
@@ -45,7 +49,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 
     <string name="AskYou">お願い</string>
     <string name="WillAskYouToProvideInformation">お使いのShowServiceModeは、情報提供者向け無料版です。動作報告や不具合などの情報提供をお願いいたします。</string>
-    
+
     <string name="notes">注意事項</string>
     <string name="disclaimer">設定を変更したことによる動作不良やトラブルには、作者は一切責任を持ちません。自己責任でのご利用をお願いします。また、メイン画面以外の画面は、ShowServiceModeアプリの画面ではありません。「隠された画面を出す」という性質上、本来「利用者が設定を変更すべきでない」ことも理解した上でご利用ください。</string>
     <string name="use_default_settings">標準設定を使う</string>
@@ -59,11 +63,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
     <string name="when_you_press_ok_button_without_entering_with_an_automatically_generated_name">入力せずにOKボタンを押すと、自動生成された名前が付きます。</string>
 
     <string name="description">ShowServiceModeは、標準で用意されている「隠し画面」を素早く呼び出すためのアプリです。お使いの機種で正常に呼び出せるかどうかにかかわらず、複数の呼び出し方法を実装しています。</string>
-    <string name="description_other">説明(対象外機種):\nご使用の機種では、ShowServiceModeが正しく動作しない可能性があります。ご自身で動作を確認のうえご使用ください。</string>
-    <string name="description_sc03d">説明(SC-03D):\n「直接呼出し Type01」の使用をお勧めします。ただし、GALAXY Note SC-05Dでは既に制限がかかっており、今後のSC-03Dのシステムアップデートにより制限がかかる可能性があります。この呼び出しが動作しなくなった場合は、「ダイアル*#2263# Type01」をお試しください。</string>
-    <string name="description_sc05d">説明(SC-05D):\n「ダイアル*#2263# Type01」の使用をお勧めします。また、SC-05Dでは「直接呼出し Type01」が動作しないことを確認しております。（システムアプリのみ直接呼出しが可能なようにセキュリティが強化されているため）</string>
-    <string name="description_sc06d">説明(SC-06D):\n「ダイアル*#197328640# Type01」の使用をお勧めします。LTEをOFFにしても勝手にONへ戻る状態が報告されており、動作が安定しない可能性があります。</string>
-    <string name="description_sc01d">説明(SC-01D):\n開発者は動作未確認です。「ダイアル*#2263# Type01」は動作すると思われます。場合によっては「直接呼出し Type01」が動作する可能性もありますので、お試しください。（是非、動作状況をご連絡ください）</string>
+    <string name="description_other">説明(対象外機種):\nご使用の機種で、ShowServiceModeが正しく動作するか未確認です。ご自身で呼び出し方法別の動作を確認のうえ、ご使用ください。また、是非、動作状況を開発者へご連絡ください。</string>
+    <string name="description_sc03d">説明(SC-03D):\n「直接2263呼出し Type01」の使用をお勧めします。Ver3.0.1までは「直接呼出し Type01」をお勧めしておりましたが、新方式発見のため、お勧め方式を変更いたしました。</string>
+    <string name="description_sc05d">説明(SC-05D):\n「直接2263呼出し Type01」の使用をお勧めします。Ver3.0.1までは「ダイアル*#2263# Type01」をお勧めしておりましたが、新方式発見のため、お勧め方式を変更いたしました。</string>
+    <string name="description_sc06d">説明(SC-06D):\n「直接197328640呼出し Type01」の使用をお勧めします。※SC-06Dでは、LTEをOFFにしても勝手にONへ戻る状態が報告されており、動作が安定しない可能性があります。</string>
+    <string name="description_sc01d">説明(SC-01D):\n大変申し訳ありませんが、現在、SC-01DでShowServiceModeが正しく動作するか未確認です。ご自身で呼び出し方法別の動作を確認のうえ、ご使用ください。また、是非、動作状況を開発者へご連絡ください。</string>
 
     <string name="error_detection">エラーを検知しました。</string>
     <string name="error_detection_message">大変申し訳ありませんが、お使いの機種では、この呼び出し方法が使えないようです。他の呼び出し方法をお試しください。</string>

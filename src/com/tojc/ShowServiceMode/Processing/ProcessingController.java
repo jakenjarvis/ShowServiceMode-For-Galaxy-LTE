@@ -26,6 +26,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 package com.tojc.ShowServiceMode.Processing;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,6 +44,8 @@ import com.tojc.ShowServiceMode.ProcessingType.ProcessingDial197328640_01;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingDial197328640_02;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingDial2263_01;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingDialFreeNumber;
+import com.tojc.ShowServiceMode.ProcessingType.ProcessingDirectlyCall197328640_01;
+import com.tojc.ShowServiceMode.ProcessingType.ProcessingDirectlyCall2263_01;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingNothing;
 import com.tojc.ShowServiceMode.ProcessingType.ProcessingRadioInfo;
 import com.tojc.ShowServiceMode.Setting.SignatureChecker;
@@ -73,6 +76,8 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 		this.add(new ProcessingDial197328640_01(parent, ProcessingTypeId.DIAL197328640_01));
 		this.add(new ProcessingDial197328640_02(parent, ProcessingTypeId.DIAL197328640_02));
 		this.add(new ProcessingBroadcast01(parent, ProcessingTypeId.BROADCAST_01));
+		this.add(new ProcessingDirectlyCall2263_01(parent, ProcessingTypeId.DIRECTLYCALL2263_01));
+		this.add(new ProcessingDirectlyCall197328640_01(parent, ProcessingTypeId.DIRECTLYCALL197328640_01));
 		this.add(new ProcessingRadioInfo(parent, ProcessingTypeId.RADIOINFO));
 		this.add(new ProcessingDialFreeNumber(parent, ProcessingTypeId.DIALFREENUMBER));
 		//
@@ -155,11 +160,11 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 				{
 					case Android2:
 						//Confirmed
-						result = ProcessingTypeId.BROADCAST_01;
+						result = ProcessingTypeId.DIRECTLYCALL2263_01;
 						break;
 					case Android4:
 						//Unconfirmed
-						result = ProcessingTypeId.DIAL197328640_01;
+						result = ProcessingTypeId.DIRECTLYCALL197328640_01;
 						break;
 				}
 				break;
@@ -169,11 +174,11 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 				{
 					case Android2:
 						//Confirmed
-						result = ProcessingTypeId.DIAL2263_01;
+						result = ProcessingTypeId.DIRECTLYCALL2263_01;
 						break;
 					case Android4:
 						//Unconfirmed
-						result = ProcessingTypeId.DIAL197328640_01;
+						result = ProcessingTypeId.DIRECTLYCALL197328640_01;
 						break;
 				}
 				break;
@@ -183,7 +188,7 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 				{
 					case Android4:
 						//Confirmed
-						result = ProcessingTypeId.DIAL197328640_01;
+						result = ProcessingTypeId.DIRECTLYCALL197328640_01;
 						break;
 				}
 				break;
@@ -197,7 +202,7 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 						break;
 					case Android4:
 						//Unconfirmed
-						result = ProcessingTypeId.DIAL197328640_01;
+						result = ProcessingTypeId.DIRECTLYCALL197328640_01;
 						break;
 				}
 				break;
@@ -207,6 +212,7 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 
 	public List<HashMap<String, Object>> CreateArrayListHashMap(boolean itemonly)
 	{
+		//TODO: Sort and ClassObject
         List<HashMap<String, Object>> result = new ArrayList<HashMap<String, Object>>();
         Map<String, Object> map;
 
