@@ -67,7 +67,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
     <string name="description_sc03d">説明(SC-03D):\n「直接2263呼出し Type01」の使用をお勧めします。Ver3.0.1までは「直接呼出し Type01」をお勧めしておりましたが、新方式発見のため、お勧め方式を変更いたしました。</string>
     <string name="description_sc05d">説明(SC-05D):\n「直接2263呼出し Type01」の使用をお勧めします。Ver3.0.1までは「ダイアル*#2263# Type01」をお勧めしておりましたが、新方式発見のため、お勧め方式を変更いたしました。</string>
     <string name="description_sc06d">説明(SC-06D):\n「直接197328640呼出し Type01」の使用をお勧めします。※SC-06Dでは、LTEをOFFにしても勝手にONへ戻る状態が報告されており、動作が安定しない可能性があります。</string>
-    <string name="description_sc01d">説明(SC-01D):\n大変申し訳ありませんが、現在、SC-01DでShowServiceModeが正しく動作するか未確認です。ご自身で呼び出し方法別の動作を確認のうえ、ご使用ください。また、是非、動作状況を開発者へご連絡ください。</string>
+    <string name="description_sc01d">説明(SC-01D):\n「直接2263呼出し Type01」の使用をお勧めします。</string>
 
     <string name="error_detection">エラーを検知しました。</string>
     <string name="error_detection_message">大変申し訳ありませんが、お使いの機種では、この呼び出し方法が使えないようです。他の呼び出し方法をお試しください。</string>

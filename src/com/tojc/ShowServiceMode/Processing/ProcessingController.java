@@ -198,7 +198,7 @@ public class ProcessingController extends ArrayList<ProcessingBase>
 				{
 					case Android3:
 						//Unconfirmed
-						result = ProcessingTypeId.DIAL2263_01;
+						result = ProcessingTypeId.DIRECTLYCALL2263_01;
 						break;
 					case Android4:
 						//Unconfirmed
