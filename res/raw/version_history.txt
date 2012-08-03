@@ -1,0 +1,52 @@
+■ ShowServiceMode For Galaxy LTE Ver3.2.0
+・Bug fixes:The problem is, the display of list does not match contents in rare cases.
+・Towards the manual registration of future freedom, has significantly improved its internal data structures.
+・Organize name of call type, has changed dramatically with the display contents.
+・We like to display a description of the call type.
+・In some models, to view the steps On/Off of LTE.
+・Added support for SHV-E210S. Added a "DataNetworkMode" and "SKTHiddenMenu" type call accordingly.
+・Added "Mobile Network Settings" type call.
+・We remove the added functionality and urgent Ver3.0.1 equivalent "Dial *#197328640# Type02".
+・To work around a bug, I had fixed the orientation of the screen display, screen rotation is now supported officially.
+・I changed the shortcut data structure. Existing shortcut is no longer available due to this.
+・Added clipboard copy button for information.
+・Added a screen About. Shows the version of history and Acknowledgements.
+・Introduced a mechanism to protect the rights of persons with a regular purchase. Add a permission for this request.
+・Added support for English display. Please point out the mistake of machine translation.
+・In order to avoid warnings when run from an earlier had come out, add a permission request.
+・Up from the previous version Ver3.1.0 is possible.
+※ Thank you Mr.Toshi for their cooperation.
+
+■ ShowServiceMode For Galaxy LTE Ver3.1.0
+・Supports direct calls to SC-05D, SC-06D SC-06D and bug fixes
+・New method, add the "Type01 197,328,640 direct call" for SC-06D
+・New method, add the "Type01 2263 direct call" for SC-03D, SC-05D
+・Along with the addition of a new method, add the app request permission
+・Along with the addition of a new method, we recommend changing the method call, and significant changes have been made of the explanation.
+※ Thank you Mr.Y for their cooperation.
+
+■ ShowServiceMode For Galaxy LTE Ver3.0.1
+・Added, "Dial *#197328640# Type02" as support for up to avoid painful solution to the problem SC-06D. You must manually the # homemade.
+・To be able to distinguish between the paid version, we have changed the notation version of the free version.
+・Added support for calls from the launcher app shortcut. We have tested with standard menus and SwipePad.
+※ Thank you Mr.usekat for their cooperation.
+
+■ ShowServiceMode For Galaxy LTE Ver3.0.0
+・With the expansion of the target model, we have changed the name of the app.
+・From a fully-reworked, I had to do with the setting screen.
+・Added the ability to run four to switch how to call a hidden screen.
+・Call-in a way that you choose, this is now possible to create a shortcut to your home.
+・We can call the screen information terminal.
+・When the boot has been modified so that it does not flicker.
+・I made the icon. (Thanks http://www.tutorial9.net/downloads/nixus-icon-pack-60-beautiful-premium-icons-free/ )
+
+■ ShowServiceMode For SC-06D Ver1.0 Test
+・Based on the ShowServiceMode For SC-03D Ver1.0, has been fixed for the SC-06D.
+
+■ ShowServiceMode For SC-03D Ver2.0
+・Without calling the dial-standard application, call the direct ServiceMode screen.
+・When the boot, but slightly flickering, no problem.
+・It was screen is displayed at the end of the dial app, you can now clear in the end Ver1.0.
+
+■ ShowServiceMode For SC-03D Ver1.0
+・Call the dial-standard apps, throwing a secret command to make a call, call the screen ServiceMode.

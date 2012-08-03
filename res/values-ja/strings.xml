@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2012, Jaken
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+ are permitted provided that the following conditions are met:
+Redistributions of source code must retain the above copyright notice, this list
+ of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this
+ list of conditions and the following disclaimer in the documentation and/or
+ other materials provided with the distribution.
+Neither the name of the Jaken's laboratory nor the names of its contributors may
+ be used to endorse or promote products derived from this software without
+ specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<resources>
+
+    <string name="app_name">ShowServiceMode For Galaxy LTE</string>
+    <string name="title_activity_setting">ShowServiceMode</string>
+
+    <string name="menu_settings">Settings</string>
+
+    <string name="description">ShowServiceModeは、標準で用意されている「シークレット画面」を素早く呼び出すためのアプリです。お使いの機種で正常に呼び出せるかどうかにかかわらず、複数の呼び出し方法を実装しています。</string>
+    <string name="use_default_settings">お勧め設定を使う</string>
+    <string name="button_execute_callservicemodeactivity">上記設定で呼び出し実行</string>
+    <string name="shortcut_message">ショートカットを作成すると、ホームからワンタッチで画面を開けるようになります。異なる呼び出し方法で複数作ることもできます。</string>
+    <string name="button_create_shortcut">上記設定でホームにショートカット作成</string>
+
+    <string name="notes">注意事項</string>
+    <string name="disclaimer">設定を変更したことによる動作不良やトラブルには、作者は一切責任を持ちません。設定内容によっては、端末内情報がすべて消えたり、エラーが発生し続けたり、通話できなくなるような危険性があります。あくまで自己責任でのご利用をお願いします。また、呼び出し後の画面は、ShowServiceModeアプリの画面ではありません。「隠された画面を出す」という性質上、本来「利用者が設定を変更すべきでない」ことも理解した上でご利用ください。</string>
+
+    <string name="basic_information">Information\n動作状況報告やトラブルが発生した場合は、以下の情報をお知らせください。</string>
+    <string name="basic_information_clipboard">クリップボードにコピー</string>
+
+    <string name="AskYou">お願い</string>
+    <string name="AskYouFreeMessage">お使いのShowServiceModeは、情報提供者向け無料版です。動作報告や不具合などの情報提供をお願いいたします。</string>
+    <string name="AskYouPiratesMessage">大変心苦しいのですが、お使いのShowServiceModeは、不正に利用された海賊版として認定されました。正規購入された方に申し訳が立たないため、機能が「情報提供者向け無料版」よりも制限されます。このメッセージが出る場合は、ライセンス認証に失敗しておりますので、正規に購入された方は、アカウントや接続状況をご確認ください。</string>
+
+    <string name="enter_name_of_shortcut">ショートカット名の入力</string>
+
+    <string name="please_select_from_following_processing_types">処理タイプの選択</string>
+
+    <string name="call_error">エラー：呼び出し実行前にエラーを検知しました。この機種ではこの呼び出し方法は無効です。他の方法をお試しください。</string>
+    <string name="param_error">エラー：呼び出しに失敗しました。呼び出しパラメータが無効です。古いショートカットからの呼び出しの可能性があります。大変お手数をおかけしますが、ショートカットを作成しなおしてください。</string>
+
+
+    <string name="open_homepage">情報提供ページを開く</string>
+    <string name="about_showservicemode">ShowServiceModeについて</string>
+
+    <string name="clipboard_message">クリップボードにコピーしました</string>
+
+    <string name="button_execute_settingactivity">ShowServiceModeを開く</string>
+    <string name="deprecated_message">大変申し訳ありません。\nバージョンアップに伴い、ショートカットの形式を変更しました。\nお手数をおかけ致しますが、ショートカットを作成しなおしてください。</string>
+
+    <string name="BuyShowServiceMode">ShowServiceMode を GooglePlay で購入する</string>
+    <string name="BuyShowServiceModeRandom">,気に入ったので,今日は気分がいいので,天気がいいので,なんとなく,寄付のつもりで,体調がいいので,大吉が出たので,中吉が出たので,小吉が出たので,吉が出たので,末吉が出たので,ハッピーなので,ぶちたいぎいので</string>
+
+    <string name="VersionHistory">バージョン履歴</string>
+    <string name="Acknowledgment">謝辞</string>
+
+</resources>

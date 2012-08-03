@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 Copyright (c) 2012, Jaken
 All rights reserved.
@@ -28,5 +29,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
     <dimen name="padding_small">8dp</dimen>
     <dimen name="padding_medium">8dp</dimen>
     <dimen name="padding_large">16dp</dimen>
+
+    <dimen name="default_textsize_small">12sp</dimen>
+    <dimen name="default_textsize_medium">14sp</dimen>
+    <dimen name="default_textsize_large">16sp</dimen>
+    <dimen name="default_textsize_xlarge">20sp</dimen>
+    
+    <dimen name="cmt_listrow_textsize_id">12sp</dimen>
+    <dimen name="cmt_listrow_textsize_caption">12sp</dimen>
+    <dimen name="cmt_listrow_textsize_title">20sp</dimen>
+    <dimen name="cmt_listrow_textsize_description">12sp</dimen>
 
 </resources>
