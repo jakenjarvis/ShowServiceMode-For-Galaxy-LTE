@@ -18,3 +18,28 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+-dontwarn javax.xml.**
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontskipnonpubliclibraryclasses
+
+-keep public class javax.xml.** { *; }
+-keep class org.simpleframework.**{ *; }
+-keep class org.simpleframework.xml.** { *; }
+-keep class org.simpleframework.xml.core.** { *; }
+-keep class org.simpleframework.xml.util.** { *; }
+
+#-keepnames class * implements java.io.Serializable
+#-keepclassmembers class * implements java.io.Serializable {
+#    static final long serialVersionUID;
+#    private static final java.io.ObjectStreamField[] serialPersistentFields;
+#    private void writeObject(java.io.ObjectOutputStream);
+#    private void readObject(java.io.ObjectInputStream);
+#    java.lang.Object writeReplace();
+#    java.lang.Object readResolve();
+#}
+
+-keep class com.tojc.ShowServiceMode.Processing.** { *; }
+-keep class com.tojc.ShowServiceMode.XmlObject.** { *; }

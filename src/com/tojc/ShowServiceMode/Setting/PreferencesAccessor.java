@@ -25,67 +25,263 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 */
 package com.tojc.ShowServiceMode.Setting;
 
-import com.tojc.ShowServiceMode.Enum.ProcessingTypeId;
+import java.util.UUID;
 
-import android.app.Activity;
+import com.tojc.ShowServiceMode.Utility.Mode;
+import com.tojc.ShowServiceMode.Utility.Version;
+
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 public class PreferencesAccessor
 {
-	private Activity parent;
+	private Context contextApplication;
 	private SharedPreferences sp;
-	private ProcessingTypeId defaultProcessingType;
+	
+	private final String PREFERENCE_FIRSTSTART = "FirstStart";
+	private final String PREFERENCE_LAST_LANGUAGE = "LastLanguage";
+	private final String PREFERENCE_BOOT_COUNT = "BootCount";
+	private final String PREFERENCE_APPLICATION_MODE = "ApplicationMode";
+	private final String PREFERENCE_UUID = "UUID";
+	private final String PREFERENCE_PREFERENCES_VERSION = "PreferencesVersion";
+	private final String PREFERENCE_USE_DEFAULT_SETTINGS = "UseDefaultSettings";
+	private final String PREFERENCE_CALLING_METHOD_TYPE_NAME = "CallingMethodTypeName";
 
-	public PreferencesAccessor(Activity parent, ProcessingTypeId defaultProcessingType)
+	// under Ver3.1.0
+	private final String PREFERENCE_PROCESSING_TYPE_ID = "ProcessingTypeId";
+
+
+	public PreferencesAccessor(Context contextApplication)
 	{
-		this.parent = parent;
-		this.sp = PreferenceManager.getDefaultSharedPreferences(this.parent);
-		this.defaultProcessingType = defaultProcessingType;
+		this.contextApplication = contextApplication;
+		this.sp = PreferenceManager.getDefaultSharedPreferences(this.contextApplication);
 	}
 
-	public void setDefault()
+	public void clear()
 	{
-		Editor editer = this.sp.edit();
-		editer.putBoolean("FirstStart", false); // after getFirstStart
-		editer.putBoolean("UseDefaultSettings", true);
-		editer.putString("ProcessingType", this.defaultProcessingType.toString());
+		this.sp.edit().clear().commit();
+	}
+
+	public void executeFirstStart(MachineInformation machineinfo)
+	{
+        Log.d(this.getClass().getSimpleName(),"executeFirstStart");
+
+        Version versionThis = machineinfo.getVersionShowServiceMode();
+		String typeDefaultProcessingTypeName = machineinfo.getModelType().getTypeDefaultProcessingTypeName();
+
+		// set default
+        Editor editer = sp.edit();
+		editer.putBoolean(PREFERENCE_FIRSTSTART, true);
+		editer.putString(PREFERENCE_LAST_LANGUAGE, machineinfo.getLocaleLanguage().toString());
+		editer.putLong(PREFERENCE_BOOT_COUNT, 0);
+		editer.putString(PREFERENCE_APPLICATION_MODE, machineinfo.getMode().toString());
+		editer.putString(PREFERENCE_UUID, UUID.randomUUID().toString());
+		editer.putString(PREFERENCE_PREFERENCES_VERSION, versionThis.toString());
+		editer.putBoolean(PREFERENCE_USE_DEFAULT_SETTINGS, true);
+		editer.putString(PREFERENCE_CALLING_METHOD_TYPE_NAME, typeDefaultProcessingTypeName);
 		editer.commit();
 	}
+
+	public void executeUpdateStart(MachineInformation machineinfo)
+	{
+        Log.d(this.getClass().getSimpleName(),"executeUpdateStart");
+
+		Version versionPreferences = getPreferencesVersion();
+		Version versionThis = machineinfo.getVersionShowServiceMode();
+		String typeDefaultProcessingTypeName = machineinfo.getModelType().getTypeDefaultProcessingTypeName();
+
+		if(versionPreferences.toString().equals("0.0.0"))
+		{
+			// under Ver3.1.0
+
+			// add PREFERENCE_BOOT_COUNT
+			setBootCount(0);
+
+        	// add PREFERENCE_UUID
+			setUUID(UUID.randomUUID());
+
+        	// delete PREFERENCE_PROCESSING_TYPE_ID
+        	String processingTypeId = this.sp.getString(PREFERENCE_PROCESSING_TYPE_ID, "NOTHING");
+			sp.edit().remove(PREFERENCE_PROCESSING_TYPE_ID).commit();
+
+        	// add PREFERENCE_CALLING_METHOD_TYPE_NAME
+			String callingMethodTypeName = convertProcessingTypeIdToCallingMethodTypeName(processingTypeId, typeDefaultProcessingTypeName);
+			setCallingMethodTypeName(callingMethodTypeName);
+		}
+
+		// add PREFERENCE_APPLICATION_MODE
+		setApplicationMode(machineinfo.getMode());
+
+		// MEMO: OnLanguageIsChangedのケースでLastLanguageの更新が必要
+		// add PREFERENCE_LAST_LANGUAGE
+		setLastLanguage(machineinfo.getLocaleLanguage().toString());
+
+        // update PREFERENCE_PREFERENCES_VERSION
+        setPreferencesVersion(versionThis);
+	}
+
+	public void executeNormalStart(MachineInformation machineinfo)
+	{
+        Log.d(this.getClass().getSimpleName(),"executeNormalStart");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private String convertProcessingTypeIdToCallingMethodTypeName(String processingTypeId, String defaultName)
+	{
+		String result = "";
+
+		if(processingTypeId.equals("NOTHING"))
+		{
+			// NOTHING
+			result = defaultName;
+		}
+		else if(processingTypeId.equals("DIAL2263_01"))
+		{
+			// DIAL2263_01
+			result = "DEF1001_DIAL_NUMBER_2263";
+		}
+		else if(processingTypeId.equals("DIAL197328640_01") || processingTypeId.equals("DIAL197328640_02"))
+		{
+			// DIAL197328640_01
+			// DIAL197328640_02
+			result = "DEF1002_DIAL_NUMBER_197328640";
+		}
+		else if(processingTypeId.equals("BROADCAST_01"))
+		{
+			// BROADCAST_01
+			result = "DEF2001_BROADCAST_SECRET_CODE_2263";
+		}
+		else if(processingTypeId.equals("DIRECTLYCALL2263_01"))
+		{
+			// DIRECTLYCALL2263_01
+			result = "DEF3001_DIRECTLY_CALL_ACTIVITY_SERVICEMODEAPP_2263";
+		}
+		else if(processingTypeId.equals("DIRECTLYCALL197328640_01"))
+		{
+			// DIRECTLYCALL197328640_01
+			result = "DEF3002_DIRECTLY_CALL_ACTIVITY_SERVICEMODEAPP_197328640";
+		}
+		else if(processingTypeId.equals("RADIOINFO"))
+		{
+			// RADIOINFO
+			result = "DEF4001_DIRECTLY_CALL_ACTIVITY_RADIOINFO";
+		}
+		else if(processingTypeId.equals("DIALFREENUMBER"))
+		{
+			// DIALFREENUMBER
+			result = "DEF9999_NOTHING";
+		}
+		else
+		{
+			result = defaultName;
+		}
+		return result;
+	}
+
+
+
+
+
+
+
+
+
 
 	// FirstStart
 	public void setFirstStart(boolean value)
 	{
-		this.sp.edit().putBoolean("FirstStart", value).commit();
+		this.sp.edit().putBoolean(PREFERENCE_FIRSTSTART, value).commit();
 	}
 	public boolean getFirstStart()
 	{
-		return this.sp.getBoolean("FirstStart", true);
+		return this.sp.getBoolean(PREFERENCE_FIRSTSTART, true);
+	}
+
+	// LastLanguage
+	public void setLastLanguage(String value)
+	{
+		this.sp.edit().putString(PREFERENCE_LAST_LANGUAGE, value).commit();
+	}
+	public String getLastLanguage()
+	{
+		return this.sp.getString(PREFERENCE_LAST_LANGUAGE, "");
+	}
+
+	// BootCount
+	public void setBootCount(long value)
+	{
+		this.sp.edit().putLong(PREFERENCE_BOOT_COUNT, value).commit();
+	}
+	public long getBootCount()
+	{
+		return this.sp.getLong(PREFERENCE_BOOT_COUNT, 0);
+	}
+
+	// ApplicationMode
+	public void setApplicationMode(Mode value)
+	{
+		this.sp.edit().putString(PREFERENCE_APPLICATION_MODE, value.toString()).commit();
+	}
+	public Mode getApplicationMode()
+	{
+		return Mode.toMode(this.sp.getString(PREFERENCE_APPLICATION_MODE, ""));
+	}
+
+	// UUID
+	public void setUUID(UUID value)
+	{
+		this.sp.edit().putString(PREFERENCE_UUID, value.toString()).commit();
+	}
+	public UUID getUUID()
+	{
+		return UUID.fromString(this.sp.getString(PREFERENCE_UUID, UUID.randomUUID().toString()));
+	}
+
+	// PreferencesVersion
+	public void setPreferencesVersion(Version value)
+	{
+		this.sp.edit().putString(PREFERENCE_PREFERENCES_VERSION, value.toString()).commit();
+	}
+	public Version getPreferencesVersion()
+	{
+		return new Version(this.sp.getString(PREFERENCE_PREFERENCES_VERSION, "0.0.0"));
 	}
 
 	// UseDefaultSettings
 	public void setUseDefaultSettings(boolean value)
 	{
-		this.sp.edit().putBoolean("UseDefaultSettings", value).commit();
+		this.sp.edit().putBoolean(PREFERENCE_USE_DEFAULT_SETTINGS, value).commit();
 	}
 	public boolean getUseDefaultSettings()
 	{
-		return this.sp.getBoolean("UseDefaultSettings", true);
+		return this.sp.getBoolean(PREFERENCE_USE_DEFAULT_SETTINGS, true);
 	}
 
-	// ProcessingType
-	public void setProcessingTypeId(ProcessingTypeId value)
+	// CallingMethodTypeName
+	public void setCallingMethodTypeName(String value)
 	{
-		this.sp.edit().putString("ProcessingTypeId", value.toString()).commit();
+		this.sp.edit().putString(PREFERENCE_CALLING_METHOD_TYPE_NAME, value).commit();
 	}
-	public ProcessingTypeId getProcessingTypeId()
+	public String getCallingMethodTypeName()
 	{
-		String value = this.sp.getString("ProcessingTypeId", "");
-		if(value.length() == 0)
-		{
-			value = this.defaultProcessingType.toString();
-		}
-		return ProcessingTypeId.toProcessingTypeId(value);
+		return this.sp.getString(PREFERENCE_CALLING_METHOD_TYPE_NAME, "");
 	}
+
+
 }

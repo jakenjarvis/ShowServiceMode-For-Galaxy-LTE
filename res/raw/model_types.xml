@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2012, Jaken
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+ are permitted provided that the following conditions are met:
+Redistributions of source code must retain the above copyright notice, this list
+ of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this
+ list of conditions and the following disclaimer in the documentation and/or
+ other materials provided with the distribution.
+Neither the name of the Jaken's laboratory nor the names of its contributors may
+ be used to endorse or promote products derived from this software without
+ specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<model>
+   <types>
+      <type id="0" name="UNKNOWN">
+         <title>Unknown</title>
+         <description>Description:\nModel which developer is not checking. Please use after a check of operation of the method of calling in person. * Please inform a developer of a situation of operation.</description>
+         <defaultprocessingtypename>DEF3001_DIRECTLY_CALL_ACTIVITY_SERVICEMODEAPP_2263</defaultprocessingtypename>
+      </type>
+      <type id="1" name="SC-03D">
+         <title>NTT docomo GALAXY S II LTE SC-03D</title>
+         <description>Description(SC-03D):\nI recommend you use of 「3001 BAND SELECTION: ServiceModeApp(2263)」.</description>
+         <defaultprocessingtypename>DEF3001_DIRECTLY_CALL_ACTIVITY_SERVICEMODEAPP_2263</defaultprocessingtypename>
+      </type>
+      <type id="2" name="SC-05D">
+         <title>NTT docomo GALAXY Note SC-05D</title>
+         <description>Description(SC-05D):\nI recommend you use of 「3001 BAND SELECTION: ServiceModeApp(2263)」.</description>
+         <defaultprocessingtypename>DEF3001_DIRECTLY_CALL_ACTIVITY_SERVICEMODEAPP_2263</defaultprocessingtypename>
+      </type>
+      <type id="3" name="SC-06D">
+         <title>NTT docomo GALAXY S III SC-06D</title>
+         <description>Description(SC-06D):\nI recommend you use of 「3001 BAND SELECTION: ServiceModeApp(2263)」.</description>
+         <defaultprocessingtypename>DEF3001_DIRECTLY_CALL_ACTIVITY_SERVICEMODEAPP_2263</defaultprocessingtypename>
+      </type>
+      <type id="4" name="SC-01D">
+         <title>NTT docomo GALAXY Tab 10.1 LTE SC-01D</title>
+         <description>Description(SC-01D):\nI recommend you use of 「3001 BAND SELECTION: ServiceModeApp(2263)」.</description>
+         <defaultprocessingtypename>DEF3001_DIRECTLY_CALL_ACTIVITY_SERVICEMODEAPP_2263</defaultprocessingtypename>
+      </type>
+      <type id="5" name="SHV-E210S">
+         <title>SK Telecom GALAXY S III SHV-E210S</title>
+         <description>Description(SHV-E210S):\nI recommend you use of 「3102 SKT Data Network Mode: DataNetworkMode」.</description>
+         <defaultprocessingtypename>DEF3102_DIRECTLY_CALL_ACTIVITY_DATANETWORKMODE</defaultprocessingtypename>
+      </type>
+
+   </types>
+</model>

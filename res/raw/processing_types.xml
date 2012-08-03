@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2012, Jaken
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+ are permitted provided that the following conditions are met:
+Redistributions of source code must retain the above copyright notice, this list
+ of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this
+ list of conditions and the following disclaimer in the documentation and/or
+ other materials provided with the distribution.
+Neither the name of the Jaken's laboratory nor the names of its contributors may
+ be used to endorse or promote products derived from this software without
+ specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<processing>
+   <types>
+      <type id="0" name="NOTHING">
+         <title>Nothing</title>
+         <description>Nothing is performed</description>
+         <classname>com.tojc.ShowServiceMode.Processing.ProcessingNothing</classname>
+         <defaultdescription></defaultdescription>
+         <themecolor>-7667573</themecolor>
+      </type>
+      <type id="1" name="DIAL_NUMBER">
+         <title>Dial Number</title>
+         <description>You call the number you specified for the dial app. Dial app that would have been displayed at the end is a fault. Method call is equivalent to manual input, execution has been limited in many models.</description>
+         <classname>com.tojc.ShowServiceMode.Processing.ProcessingDialNumber</classname>
+         <defaultdescription>This will call the %dialnumber% for a dial app.</defaultdescription>
+         <themecolor>-7667712</themecolor>
+      </type>
+      <type id="2" name="BROADCAST_SECRET_CODE">
+         <title>Broadcast Secret Code</title>
+         <description>Will broadcast a secret code. And broadcast, refers to the simultaneous notification to the program that can be received by this terminal. Is how to call a general of the secret code, execution has been limited in many models.</description>
+         <classname>com.tojc.ShowServiceMode.Processing.ProcessingBroadcastSecretCode</classname>
+         <defaultdescription>Calls in %secretcode% broadcast a secret code.</defaultdescription>
+         <themecolor>-16741632</themecolor>
+      </type>
+      <type id="3" name="DIRECTLY_CALL_ACTIVITY">
+         <title>Directly Call Activity</title>
+         <description>This will directly call the activity class of the app. Method is a special call from the program. In some cases, you can also call "screen that can not be called manually." (If it exists function)</description>
+         <classname>com.tojc.ShowServiceMode.Processing.ProcessingDirectlyCallActivity</classname>
+         <defaultdescription>This will directly call the %class% class.</defaultdescription>
+         <themecolor>-16777077</themecolor>
+      </type>
+   </types>
+</processing>

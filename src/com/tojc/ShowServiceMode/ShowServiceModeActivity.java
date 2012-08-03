@@ -25,50 +25,36 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 */
 package com.tojc.ShowServiceMode;
 
-import com.tojc.ShowServiceMode.Enum.ProcessingTypeId;
-import com.tojc.ShowServiceMode.Processing.ProcessingController;
-
+import com.tojc.ShowServiceMode.Activity.SettingActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
-import android.view.Window;
-import android.widget.Toast;
+import android.view.View;
 
 public class ShowServiceModeActivity extends Activity
 {
-	private ProcessingController pController;
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setVisible(false);
-        setContentView(R.layout.activity_show_service_mode);
+        setContentView(R.layout.activity_deprecated_show_service_mode);
 
 		Log.d(this.getClass().getSimpleName(),"ShowServiceModeActivity.onCreate");
-
-        this.pController = new ProcessingController(this);
-
-        Intent intent = getIntent();
-        if(intent != null)
-        {
-        	String param = intent.getStringExtra("com.tojc.ShowServiceMode.Enum.ProcessingTypeId");
-        	
-        	this.pController.setInstanceById(ProcessingTypeId.toProcessingTypeId(param));
-        	showToast(this.pController.getInstance().getTitle());
-
-        	if(this.pController.getInstance().getProcessingTypeId() != ProcessingTypeId.NOTHING)
-        	{
-            	this.pController.getInstance().Execute(this, null);
-        	}
-        }
-		finish();
     }
 
-	private void showToast(String str)
+	public void onClickButtonExecuteSettingActivity(View view)
 	{
-		Toast.makeText(this, str, Toast.LENGTH_LONG).show();
+        Log.d(this.getClass().getSimpleName(),"onClickButtonExecuteSettingActivity start");
+
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent.setClassName(this, SettingActivity.class.getName());
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+		this.startActivity(intent);
+		finish();
+
+		Log.d(this.getClass().getSimpleName(),"onClickButtonExecuteSettingActivity end");
 	}
 
 }

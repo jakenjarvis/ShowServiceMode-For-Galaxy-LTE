@@ -25,7 +25,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 */
 package com.tojc.ShowServiceMode.Setting;
 
-import android.app.Activity;
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import com.tojc.ShowServiceMode.Utility.Value;
+
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -34,28 +41,37 @@ import android.util.Log;
 
 public class SignatureChecker
 {
-	private Activity parent;
+	private Context contextApplication;
 	private PackageManager pm;
 
-	public SignatureChecker(Activity parent)
+    private boolean debugSignature = false;
+	private boolean releaseSignature = false;
+
+	public SignatureChecker(Context contextApplication)
 	{
-		this.parent = parent;
-		this.pm = this.parent.getPackageManager();
+		this.contextApplication = contextApplication;
+		this.pm = this.contextApplication.getPackageManager();
+
+        this.debugSignature = this.isSignature(Value.DB01) || this.isSignature(Value.DB02);
+        this.releaseSignature = this.isSignature(Value.DB03);
+		Log.d(this.getClass().getSimpleName(), "isSignature D:" + this.debugSignature + ", R:" + this.releaseSignature);
 	}
 
-	public boolean isSignature(String sig)
+	public boolean isSignature(String target)
 	{
 		boolean result = false;
 		try
 		{
-			PackageInfo packageInfo = pm.getPackageInfo(this.parent.getPackageName(),
-			PackageManager.GET_SIGNATURES);
+			PackageInfo packageInfo = pm.getPackageInfo(
+					this.contextApplication.getPackageName(),
+					PackageManager.GET_SIGNATURES);
 			for (int i = 0; i < packageInfo.signatures.length; i++)
 			{
 				Signature signature = packageInfo.signatures[i];
 				//Log.d(this.getClass().getSimpleName(), "Signature:" + signature.toCharsString());
-				
-				if(signature.toCharsString().equals(sig))
+				String value = SignatureChecker.digest(signature.toCharsString()).toUpperCase();
+				//Log.d(this.getClass().getSimpleName(), "Value:" + value);
+				if(value.equals(target))
 				{
 					result = true;
 					break;
@@ -69,5 +85,36 @@ public class SignatureChecker
 		return result;
 	}
 
+	public boolean isDebugSignature()
+	{
+		return this.debugSignature;
+	}
+	public boolean isReleaseSignature()
+	{
+		return this.releaseSignature;
+	}
+
+	public static String digest(String message)
+	{
+		String result = "";
+		MessageDigest md;
+		byte[] data;
+		try
+		{
+			md = MessageDigest.getInstance("SHA-256");
+			md.update(message.getBytes("UTF-8"));
+			data = md.digest();
+			result = String.format("%0" + (data.length * 2) + 'x', new BigInteger(1, data));
+		}
+		catch (NoSuchAlgorithmException e)
+		{
+			e.printStackTrace();
+		}
+		catch(UnsupportedEncodingException e)
+		{
+			e.printStackTrace();
+		}
+		return result;
+	}
 
 }
