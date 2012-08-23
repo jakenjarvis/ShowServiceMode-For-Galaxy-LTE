@@ -149,7 +149,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
              <property key="action" value="android.intent.action.MAIN"/>
          </parameter>
       </type>
-
+      <type id="3103" name="%default%">
+         <caption>%default%</caption>
+         <title>SKT Data Call Setting: DataCallSetting</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter>
+             <property key="package" value="com.sec.android.widgetapp.DataCallSetting"/>
+             <property key="class" value="com.sec.android.widgetapp.DataCallSetting.DataCallSettingDialogActivity"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+         </parameter>
+      </type>
+      
       <type id="4001" name="%default%">
          <caption>%default%</caption>
          <title>端末情報: RadioInfo</title>
