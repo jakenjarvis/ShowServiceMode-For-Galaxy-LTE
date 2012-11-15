@@ -63,6 +63,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
          </parameter>
       </type>
 
+      <type id="1101" name="%default%">
+         <caption>%default%</caption>
+         <title>BAND SELECTION: *#2263#</title>
+         <description>%default%</description>
+         <processingtypename>USSD_EXPLOIT_CALL</processingtypename>
+         <parameter specialkey="dialnumber">
+             <extraproperty key="dialnumber" value="*#2263#"/>
+         </parameter>
+      </type>
+      <type id="1102" name="%default%">
+         <caption>%default%</caption>
+         <title>MAIN MENU: *#197328640#</title>
+         <description>%default%</description>
+         <processingtypename>USSD_EXPLOIT_CALL</processingtypename>
+         <parameter specialkey="dialnumber">
+             <extraproperty key="dialnumber" value="*#197328640#"/>
+         </parameter>
+      </type>
+
       <type id="2001" name="%default%">
          <caption>%default%</caption>
          <title>BAND SELECTION: 2263</title>
@@ -181,6 +200,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
              <property key="package" value="com.android.phone"/>
              <property key="class" value="com.android.phone.Settings"/>
              <property key="action" value="android.intent.action.MAIN"/>
+         </parameter>
+      </type>
+      <type id="4003" name="%default%">
+         <caption>%default%</caption>
+         <title>GSM Status: ServiceModeApp(0011)</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="0011"/>
          </parameter>
       </type>
 

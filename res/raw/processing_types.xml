@@ -54,5 +54,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
          <defaultdescription>This will directly call the %class% class.</defaultdescription>
          <themecolor>-16777077</themecolor>
       </type>
+      <type id="4" name="USSD_EXPLOIT_CALL">
+         <title>USSD Exploit Call</title>
+         <description>Call the number, Using USSD Exploit. Hope an experimental feature, and it does not work on many models.</description>
+         <classname>com.tojc.ShowServiceMode.Processing.ProcessingUSSDExploitCall</classname>
+         <defaultdescription>This will call the %dialnumber% for a dial app.</defaultdescription>
+         <themecolor>-7667712</themecolor>
+      </type>
    </types>
 </processing>

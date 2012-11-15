@@ -54,5 +54,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
          <defaultdescription>%class%クラスを直接呼び出します。</defaultdescription>
          <themecolor>-16777077</themecolor>
       </type>
+      <type id="4" name="USSD_EXPLOIT_CALL">
+         <title>USSD Exploit呼出</title>
+         <description>USSD Exploitと同じ手法を使って、ダイアルアプリに対して指定した番号を発呼します。実験的な機能であり、多くのモデルでは動作しないことを期待しています。</description>
+         <classname>com.tojc.ShowServiceMode.Processing.ProcessingUSSDExploitCall</classname>
+         <defaultdescription>ダイアルアプリに対して%dialnumber%を発呼します。</defaultdescription>
+         <themecolor>-7667712</themecolor>
+      </type>
    </types>
 </processing>
