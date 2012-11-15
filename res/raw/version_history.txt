@@ -1,3 +1,10 @@
+■ShowServiceMode For Galaxy LTE Ver3.2.1
+・Added "SKT Data Call Setting" type call.
+・Added "GSM Status" type call.
+・Added "USSD Exploit Call" in 2 type. Hope an experimental feature, and it does not work on many models.
+・Upgraded the library, which is used internally.
+※ Thank you Mr.Thomas for their cooperation.
+
 ■ ShowServiceMode For Galaxy LTE Ver3.2.0
 ・Bug fixes:The problem is, the display of list does not match contents in rare cases.
 ・Towards the manual registration of future freedom, has significantly improved its internal data structures.
@@ -19,7 +26,7 @@
 
 ■ ShowServiceMode For Galaxy LTE Ver3.1.0
 ・Supports direct calls to SC-05D, SC-06D SC-06D and bug fixes
-・New method, add the "Type01 197,328,640 direct call" for SC-06D
+・New method, add the "Type01 197328640 direct call" for SC-06D
 ・New method, add the "Type01 2263 direct call" for SC-03D, SC-05D
 ・Along with the addition of a new method, add the app request permission
 ・Along with the addition of a new method, we recommend changing the method call, and significant changes have been made of the explanation.
