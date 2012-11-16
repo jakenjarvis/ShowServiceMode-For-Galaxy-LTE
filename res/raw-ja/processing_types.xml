@@ -59,7 +59,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
          <description>USSD Exploitと同じ手法を使って、ダイアルアプリに対して指定した番号を発呼します。実験的な機能であり、多くのモデルでは動作しないことを期待しています。</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingUSSDExploitCall</classname>
          <defaultdescription>ダイアルアプリに対して%dialnumber%を発呼します。</defaultdescription>
-         <themecolor>-7667712</themecolor>
+         <themecolor>-7632128</themecolor>
       </type>
    </types>
 </processing>

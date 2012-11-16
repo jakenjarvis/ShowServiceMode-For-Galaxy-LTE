@@ -59,7 +59,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
          <description>Call the number, Using USSD Exploit. Hope an experimental feature, and it does not work on many models.</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingUSSDExploitCall</classname>
          <defaultdescription>This will call the %dialnumber% for a dial app.</defaultdescription>
-         <themecolor>-7667712</themecolor>
+         <themecolor>-7632128</themecolor>
       </type>
    </types>
 </processing>
