@@ -214,6 +214,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
              <extraproperty key="keyString" value="0011"/>
          </parameter>
       </type>
+      <type id="4004" name="%default%">
+         <caption>%default%</caption>
+         <title>モバイルネットワーク設定: phone.MobileNetworkSettings</title>
+         <description>モバイルネットワーク設定画面を呼び出します。</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter>
+             <property key="package" value="com.android.phone"/>
+             <property key="class" value="com.android.phone.MobileNetworkSettings"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+         </parameter>
+      </type>
 
       <type id="9999" name="%default%">
          <caption>%default%</caption>
