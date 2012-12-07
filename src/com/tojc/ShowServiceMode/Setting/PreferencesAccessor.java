@@ -30,9 +30,13 @@ import java.util.UUID;
 import com.tojc.ShowServiceMode.Utility.Mode;
 import com.tojc.ShowServiceMode.Utility.Version;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -71,6 +75,22 @@ public class PreferencesAccessor
 
         Version versionThis = machineinfo.getVersionShowServiceMode();
 		String typeDefaultProcessingTypeName = machineinfo.getModelType().getTypeDefaultProcessingTypeName();
+
+		// TODO: 場当たり的な対応
+		// ServiceModeAppの存在有無でデフォルトを切り替える。
+		if(machineinfo.getModelType().getKeyId() == 0)
+		{
+			// UNKNOWN
+			PackageManager manager = this.contextApplication.getPackageManager();
+			try
+			{
+				ActivityInfo info = manager.getActivityInfo(new ComponentName("com.sec.android.app.servicemodeapp", "com.sec.android.app.servicemodeapp.ServiceModeApp"), 0);
+			}
+			catch(NameNotFoundException e)
+			{
+				typeDefaultProcessingTypeName = "DEF4001_DIRECTLY_CALL_ACTIVITY_RADIOINFO";
+			}
+		}
 
 		// set default
         Editor editer = sp.edit();
