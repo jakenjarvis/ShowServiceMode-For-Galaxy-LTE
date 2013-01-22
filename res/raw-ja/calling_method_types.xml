@@ -26,185 +26,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 -->
 <callingmethod>
    <types>
+
       <type id="1001" name="%default%">
          <caption>%default%</caption>
-         <title>BAND SELECTION: *#2263#</title>
+         <title>0000</title>
          <description>%default%</description>
-         <processingtypename>DIAL_NUMBER</processingtypename>
-         <parameter specialkey="dialnumber">
-             <extraproperty key="dialnumber" value="*#2263#"/>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="0000"/>
          </parameter>
       </type>
+
       <type id="1002" name="%default%">
          <caption>%default%</caption>
-         <title>MAIN MENU: *#197328640#</title>
-         <description>%default%</description>
-         <processingtypename>DIAL_NUMBER</processingtypename>
-         <parameter specialkey="dialnumber">
-             <extraproperty key="dialnumber" value="*#197328640#"/>
-         </parameter>
-      </type>
-      <type id="1003" name="%default%">
-         <caption>%default%</caption>
-         <title>BAND SELECTION: *#*#2263#*#*</title>
-         <description>%default%</description>
-         <processingtypename>DIAL_NUMBER</processingtypename>
-         <parameter specialkey="dialnumber">
-             <extraproperty key="dialnumber" value="*#*#2263#*#*"/>
-         </parameter>
-      </type>
-      <type id="1004" name="%default%">
-         <caption>%default%</caption>
-         <title>MAIN MENU: *#*#197328640#*#*</title>
-         <description>%default%</description>
-         <processingtypename>DIAL_NUMBER</processingtypename>
-         <parameter specialkey="dialnumber">
-             <extraproperty key="dialnumber" value="*#*#197328640#*#*"/>
-         </parameter>
-      </type>
-
-      <type id="1101" name="%default%">
-         <caption>%default%</caption>
-         <title>BAND SELECTION: *#2263#</title>
-         <description>%default%</description>
-         <processingtypename>USSD_EXPLOIT_CALL</processingtypename>
-         <parameter specialkey="dialnumber">
-             <extraproperty key="dialnumber" value="*#2263#"/>
-         </parameter>
-      </type>
-      <type id="1102" name="%default%">
-         <caption>%default%</caption>
-         <title>MAIN MENU: *#197328640#</title>
-         <description>%default%</description>
-         <processingtypename>USSD_EXPLOIT_CALL</processingtypename>
-         <parameter specialkey="dialnumber">
-             <extraproperty key="dialnumber" value="*#197328640#"/>
-         </parameter>
-      </type>
-
-      <type id="2001" name="%default%">
-         <caption>%default%</caption>
-         <title>BAND SELECTION: 2263</title>
-         <description>%default%</description>
-         <processingtypename>BROADCAST_SECRET_CODE</processingtypename>
-         <parameter specialkey="secretcode">
-             <extraproperty key="secretcode" value="2263"/>
-         </parameter>
-      </type>
-      <type id="2002" name="%default%">
-         <caption>%default%</caption>
-         <title>MAIN MENU: 197328640</title>
-         <description>%default%</description>
-         <processingtypename>BROADCAST_SECRET_CODE</processingtypename>
-         <parameter specialkey="secretcode">
-             <extraproperty key="secretcode" value="197328640"/>
-         </parameter>
-      </type>
-
-      <type id="2101" name="%default%">
-         <caption>%default%</caption>
-         <title>SKT Hidden Menu: 319712358</title>
-         <description>%default%</description>
-         <processingtypename>BROADCAST_SECRET_CODE</processingtypename>
-         <parameter specialkey="secretcode">
-             <extraproperty key="secretcode" value="319712358"/>
-         </parameter>
-      </type>
-      <type id="2102" name="%default%">
-         <caption>%default%</caption>
-         <title>SKT Data Network Mode: 232580</title>
-         <description>%default%</description>
-         <processingtypename>BROADCAST_SECRET_CODE</processingtypename>
-         <parameter specialkey="secretcode">
-             <extraproperty key="secretcode" value="232580"/>
-         </parameter>
-      </type>
-
-      <type id="3001" name="%default%">
-         <caption>%default%</caption>
-         <title>BAND SELECTION: ServiceModeApp(2263)</title>
-         <description>%default%</description>
-         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
-         <parameter specialkey="keyString">
-             <property key="package" value="com.sec.android.app.servicemodeapp"/>
-             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
-             <property key="action" value="android.intent.action.MAIN"/>
-             <extraproperty key="keyString" value="2263"/>
-         </parameter>
-      </type>
-      <type id="3002" name="%default%">
-         <caption>%default%</caption>
-         <title>MAIN MENU: ServiceModeApp(197328640)</title>
-         <description>%default%</description>
-         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
-         <parameter specialkey="keyString">
-             <property key="package" value="com.sec.android.app.servicemodeapp"/>
-             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
-             <property key="action" value="android.intent.action.MAIN"/>
-             <extraproperty key="keyString" value="197328640"/>
-         </parameter>
-      </type>
-
-      <type id="3101" name="%default%">
-         <caption>%default%</caption>
-         <title>SKT Hidden Menu: SKTHiddenMenuList</title>
-         <description>%default%</description>
-         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
-         <parameter>
-             <property key="package" value="com.samsung.hidden.SKT"/>
-             <property key="class" value="com.samsung.hidden.SKT.SKTHiddenMenuList"/>
-             <property key="action" value="intent.com.samsung.hidden.SKT.MenuList"/>
-             <!-- StringExtra("com.samsung.hidden.SKT.Path") -->
-         </parameter>
-      </type>
-      <type id="3102" name="%default%">
-         <caption>%default%</caption>
-         <title>SKT Data Network Mode: DataNetworkMode</title>
-         <description>%default%</description>
-         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
-         <parameter>
-             <property key="package" value="com.samsung.hidden.SKT"/>
-             <property key="class" value="com.samsung.hidden.SKT.hiddenstringactivity.DataNetworkMode"/>
-             <property key="action" value="android.intent.action.MAIN"/>
-         </parameter>
-      </type>
-      <type id="3103" name="%default%">
-         <caption>%default%</caption>
-         <title>SKT Data Call Setting: DataCallSetting</title>
-         <description>%default%</description>
-         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
-         <parameter>
-             <property key="package" value="com.sec.android.widgetapp.DataCallSetting"/>
-             <property key="class" value="com.sec.android.widgetapp.DataCallSetting.DataCallSettingDialogActivity"/>
-             <property key="action" value="android.intent.action.MAIN"/>
-         </parameter>
-      </type>
-      
-      <type id="4001" name="%default%">
-         <caption>%default%</caption>
-         <title>端末情報: RadioInfo</title>
-         <description>端末情報画面を呼び出します。</description>
-         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
-         <parameter>
-             <property key="package" value="com.android.settings"/>
-             <property key="class" value="com.android.settings.RadioInfo"/>
-             <property key="action" value="android.intent.action.MAIN"/>
-         </parameter>
-      </type>
-      <type id="4002" name="%default%">
-         <caption>%default%</caption>
-         <title>ネットワーク設定: phone.Settings</title>
-         <description>ネットワーク設定画面を呼び出します。</description>
-         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
-         <parameter>
-             <property key="package" value="com.android.phone"/>
-             <property key="class" value="com.android.phone.Settings"/>
-             <property key="action" value="android.intent.action.MAIN"/>
-         </parameter>
-      </type>
-      <type id="4003" name="%default%">
-         <caption>%default%</caption>
-         <title>GSM Status: ServiceModeApp(0011)</title>
+         <title>0011</title>
          <description>%default%</description>
          <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
          <parameter specialkey="keyString">
@@ -215,11 +53,603 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
          </parameter>
       </type>
 
-      <type id="9999" name="%default%">
+      <type id="1003" name="%default%">
          <caption>%default%</caption>
-         <title>自由設定（未実装）</title>
-         <description>利用者が設定した内容で呼び出します。（現在未実装のため、何も起きません）</description>
-         <processingtypename>NOTHING</processingtypename>
+         <title>01</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="01"/>
+         </parameter>
       </type>
+
+      <type id="1004" name="%default%">
+         <caption>%default%</caption>
+         <title>0228</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="0228"/>
+         </parameter>
+      </type>
+
+      <type id="1005" name="%default%">
+         <caption>%default%</caption>
+         <title>03</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="03"/>
+         </parameter>
+      </type>
+
+      <type id="1006" name="%default%">
+         <caption>%default%</caption>
+         <title>0514</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="0514"/>
+         </parameter>
+      </type>
+
+      <type id="1007" name="%default%">
+         <caption>%default%</caption>
+         <title>1111</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="1111"/>
+         </parameter>
+      </type>
+
+      <type id="1008" name="%default%">
+         <caption>%default%</caption>
+         <title>1234</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="1234"/>
+         </parameter>
+      </type>
+
+      <type id="1009" name="%default%">
+         <caption>%default%</caption>
+         <title>123456</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="123456"/>
+         </parameter>
+      </type>
+
+      <type id="1010" name="%default%">
+         <caption>%default%</caption>
+         <title>147852</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="147852"/>
+         </parameter>
+      </type>
+
+      <type id="1011" name="%default%">
+         <caption>%default%</caption>
+         <title>1478963</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="1478963"/>
+         </parameter>
+      </type>
+
+      <type id="1012" name="%default%">
+         <caption>%default%</caption>
+         <title>1575</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="1575"/>
+         </parameter>
+      </type>
+
+      <type id="1013" name="%default%">
+         <caption>%default%</caption>
+         <title>197328640</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="197328640"/>
+         </parameter>
+      </type>
+
+      <type id="1014" name="%default%">
+         <caption>%default%</caption>
+         <title>2222</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="2222"/>
+         </parameter>
+      </type>
+
+      <type id="1015" name="%default%">
+         <caption>%default%</caption>
+         <title>22553767</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="22553767"/>
+         </parameter>
+      </type>
+
+      <type id="1016" name="%default%">
+         <caption>%default%</caption>
+         <title>22558463</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="22558463"/>
+         </parameter>
+      </type>
+
+      <type id="1017" name="%default%">
+         <caption>%default%</caption>
+         <title>2263</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="2263"/>
+         </parameter>
+      </type>
+
+      <type id="1018" name="%default%">
+         <caption>%default%</caption>
+         <title>232331</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="232331"/>
+         </parameter>
+      </type>
+
+      <type id="1019" name="%default%">
+         <caption>%default%</caption>
+         <title>232332</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="232332"/>
+         </parameter>
+      </type>
+
+      <type id="1020" name="%default%">
+         <caption>%default%</caption>
+         <title>232337</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="232337"/>
+         </parameter>
+      </type>
+
+      <type id="1021" name="%default%">
+         <caption>%default%</caption>
+         <title>2580</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="2580"/>
+         </parameter>
+      </type>
+
+      <type id="1022" name="%default%">
+         <caption>%default%</caption>
+         <title>2684</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="2684"/>
+         </parameter>
+      </type>
+
+      <type id="1023" name="%default%">
+         <caption>%default%</caption>
+         <title>*Danger: 2767*2878</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="2767*2878"/>
+         </parameter>
+      </type>
+
+      <type id="1024" name="%default%">
+         <caption>%default%</caption>
+         <title>279301</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="279301"/>
+         </parameter>
+      </type>
+
+      <type id="1025" name="%default%">
+         <caption>%default%</caption>
+         <title>2886</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="2886"/>
+         </parameter>
+      </type>
+
+      <type id="1026" name="%default%">
+         <caption>%default%</caption>
+         <title>301279</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="301279"/>
+         </parameter>
+      </type>
+
+      <type id="1027" name="%default%">
+         <caption>%default%</caption>
+         <title>3214789</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="3214789"/>
+         </parameter>
+      </type>
+
+      <type id="1028" name="%default%">
+         <caption>%default%</caption>
+         <title>3214789650</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="3214789650"/>
+         </parameter>
+      </type>
+
+      <type id="1029" name="%default%">
+         <caption>%default%</caption>
+         <title>32489</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="32489"/>
+         </parameter>
+      </type>
+
+      <type id="1030" name="%default%">
+         <caption>%default%</caption>
+         <title>369852</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="369852"/>
+         </parameter>
+      </type>
+
+      <type id="1031" name="%default%">
+         <caption>%default%</caption>
+         <title>3698741</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="3698741"/>
+         </parameter>
+      </type>
+
+      <type id="1032" name="%default%">
+         <caption>%default%</caption>
+         <title>4238378</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="4238378"/>
+         </parameter>
+      </type>
+
+      <type id="1033" name="%default%">
+         <caption>%default%</caption>
+         <title>4387264636</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="4387264636"/>
+         </parameter>
+      </type>
+
+      <type id="1034" name="%default%">
+         <caption>%default%</caption>
+         <title>4433366335623</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="4433366335623"/>
+         </parameter>
+      </type>
+
+      <type id="1035" name="%default%">
+         <caption>%default%</caption>
+         <title>5337632</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="5337632"/>
+         </parameter>
+      </type>
+
+      <type id="1036" name="%default%">
+         <caption>%default%</caption>
+         <title>66336</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="66336"/>
+         </parameter>
+      </type>
+
+      <type id="1037" name="%default%">
+         <caption>%default%</caption>
+         <title>6984125*</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="6984125*"/>
+         </parameter>
+      </type>
+
+      <type id="1038" name="%default%">
+         <caption>%default%</caption>
+         <title>738767633</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="738767633"/>
+         </parameter>
+      </type>
+
+      <type id="1039" name="%default%">
+         <caption>%default%</caption>
+         <title>73876766</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="73876766"/>
+         </parameter>
+      </type>
+
+      <type id="1040" name="%default%">
+         <caption>%default%</caption>
+         <title>7387677763</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="7387677763"/>
+         </parameter>
+      </type>
+
+      <type id="1041" name="%default%">
+         <caption>%default%</caption>
+         <title>7387678378</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="7387678378"/>
+         </parameter>
+      </type>
+
+      <type id="1042" name="%default%">
+         <caption>%default%</caption>
+         <title>745</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="745"/>
+         </parameter>
+      </type>
+
+      <type id="1043" name="%default%">
+         <caption>%default%</caption>
+         <title>746</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="746"/>
+         </parameter>
+      </type>
+
+      <type id="1044" name="%default%">
+         <caption>%default%</caption>
+         <title>827828868378</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="827828868378"/>
+         </parameter>
+      </type>
+
+      <type id="1045" name="%default%">
+         <caption>%default%</caption>
+         <title>8888</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="8888"/>
+         </parameter>
+      </type>
+
+      <type id="1046" name="%default%">
+         <caption>%default%</caption>
+         <title>9090</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="9090"/>
+         </parameter>
+      </type>
+
+      <type id="1047" name="%default%">
+         <caption>%default%</caption>
+         <title>9900</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="9900"/>
+         </parameter>
+      </type>
+
+      <type id="1048" name="%default%">
+         <caption>%default%</caption>
+         <title>TESTMODE</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.app.servicemodeapp"/>
+             <property key="class" value="com.sec.android.app.servicemodeapp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="TESTMODE"/>
+         </parameter>
+      </type>
+
    </types>
 </callingmethod>

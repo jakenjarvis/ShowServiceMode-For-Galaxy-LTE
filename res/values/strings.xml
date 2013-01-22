@@ -26,7 +26,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 -->
 <resources>
 
-    <string name="app_name">ShowServiceMode For Galaxy LTE</string>
+    <string name="app_name">ShowServiceMode For Masa</string>
     <string name="title_activity_setting">ShowServiceMode</string>
 
     <string name="menu_settings">Settings</string>
@@ -44,7 +44,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
     <string name="basic_information_clipboard">[Copy to Clipboard]</string>
 
     <string name="AskYou">Ask you</string>
-    <string name="AskYouFreeMessage">This is a free version for information providers. You will be asked to provide information such as bug reports and behavior.</string>
+    <string name="AskYouFreeMessage">This is only a test version ShowServiceMode for Mr. Masa. Use other than Mr. Masa are strictly prohibited.</string>
     <string name="AskYouPiratesMessage">I very painful, ShowServiceMode you are using, has been certified as was used illegally pirated. Function will be limited. So we have failed to activate, people who have legitimately purchased, please check the connection status and account.</string>
 
     <string name="enter_name_of_shortcut">Enter the shortcut name</string>
