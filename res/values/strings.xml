@@ -31,28 +31,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 
     <string name="menu_settings">Settings</string>
 
-    <string name="description">ShowServiceMode is an application for a quick call "secret screen" that are provided as standard. Regardless of whether or not you can be called successfully in models, which implements the method of multiple calls.</string>
+    <string name="description">The "ShowServiceMode" is an application to be able to call "Secret Screen" quickly which are provided as standard maintenance menu. Regardless of whether or not you can call successfully on your models, this implements a lot of  method of multiple calls which can call.</string>
     <string name="use_default_settings">Use the recommended setting</string>
-    <string name="button_execute_callservicemodeactivity">Calling run the above settings</string>
-    <string name="shortcut_message">When you create a shortcut, you will be able to open the screen with one touch from home. You can also make calls to multiple different ways.</string>
-    <string name="button_create_shortcut">Create a shortcut to the home in the above setting</string>
+    <string name="button_execute_callservicemodeactivity">Run with the above settings choosed</string>
+    <string name="shortcut_message">When you create a shortcut on HOME screen, you will be able to open the screen with one touch from HOME screen. And also you will be able to make calls to multiple different ways.</string>
+    <string name="button_create_shortcut">Create a shortcut to the HOME screen with the above setting</string>
 
     <string name="notes">Notes</string>
-    <string name="disclaimer">To malfunction or trouble due to the change the setting, the developer does not take any responsibility. Please use only your own risk. By the settings, all data disappear, or continue to occur is an error, there is a risk that would prevent the call. Additionally, the screen after the call is not a ShowServiceMode app. Please use on the understanding, is that users should not change the settings easily. Sorry, support for foreign language is difficult. Developers can understand only Japanese.</string>
+    <string name="disclaimer">To malfunction or trouble due to the change the setting, the developer does not take any responsibility. Please use this on your own risk. By the settings, all data disappear, or continue to occur is an error as the case may be. Actaully there may be a risk that would prevent the call. Additionally, the screen after the call is not a ShowServiceMode app. Please use on the understanding, is that users should not change the settings easily. Sorry, support for foreign language is difficult. Developers can understand only Japanese.</string>
 
-    <string name="basic_information">Information\nIf a problem behavior has occurred and the status report, please provide the following information.</string>
+    <string name="basic_information">Information\nWhen you have something troubles or have to share the status report, please provide the following information.</string>
     <string name="basic_information_clipboard">[Copy to Clipboard]</string>
 
     <string name="AskYou">Ask you</string>
-    <string name="AskYouFreeMessage">This is a free version for information providers. You will be asked to provide information such as bug reports and behavior.</string>
-    <string name="AskYouPiratesMessage">I very painful, ShowServiceMode you are using, has been certified as was used illegally pirated. Function will be limited. So we have failed to activate, people who have legitimately purchased, please check the connection status and account.</string>
+    <string name="AskYouFreeMessage">This is provided, like an evaluation version, as free version for information providers. You will be asked to provide information such as Bug reports and behavior which you find out.</string>
+    <string name="AskYouPiratesMessage">I\'m very sorry that ShowServiceMode recognizes you are NOT using official version, and unfortunately this is used illegally pirated. Some of feature will be limited. Would much appreciate if you could make sure your account of Google Play or the connection to Internet. This message is shown even thought you have already purchased for this application on Google Play, please kindly let me know. Basically in the case of the message appears, you fail to activate.</string>
 
     <string name="enter_name_of_shortcut">Enter the shortcut name</string>
 
     <string name="please_select_from_following_processing_types">Select from processing type</string>
 
     <string name="call_error">ERROR! Has detected the error before calling run. In this model how this call is not valid. Please try the other methods.</string>
-    <string name="param_error">ERROR! Call failed. Call parameters are invalid. May be a call from the old shortcut. But the inconvenience great, please re-create the shortcut.</string>
+    <string name="param_error">ERROR! Calling failed. Calling parameters are invalid. May be a call from the old shortcut. Please re-create the shortcut.</string>
 
 
     <string name="open_homepage">Open the developer site (Japanese only)</string>
@@ -60,10 +60,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 
     <string name="clipboard_message">Copied to clipboard.</string>
 
-    <string name="button_execute_settingactivity">Execute ShowServiceModeく</string>
-    <string name="deprecated_message">Sorry.\nWith the version up, I change the format of the shortcut.\nPlease re-create the shortcut.</string>
+    <string name="button_execute_settingactivity">Run ShowServiceMode</string>
+    <string name="deprecated_message">Sorry.\nDue to the version up, I change the format of the shortcut.\nPlease re-create the shortcut again.</string>
 
-    <string name="BuyShowServiceMode">I liked the ShowServiceMode, to purchase GooglePlay.</string>
+    <string name="BuyShowServiceMode">I Love the ShowServiceMode. Purchase GooglePlay.</string>
     <string name="BuyShowServiceModeRandom"></string>
 
     <string name="VersionHistory">Version History</string>

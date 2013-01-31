@@ -27,36 +27,36 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 <processing>
    <types>
       <type id="0" name="NOTHING">
-         <title>Nothing</title>
-         <description>Nothing is performed</description>
+         <title>No Action</title>
+         <description>Nothing is Executed</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingNothing</classname>
          <defaultdescription></defaultdescription>
          <themecolor>-7667573</themecolor>
       </type>
       <type id="1" name="DIAL_NUMBER">
          <title>Dial Number</title>
-         <description>You call the number you specified for the dial app. Dial app that would have been displayed at the end is a fault. Method call is equivalent to manual input, execution has been limited in many models.</description>
+         <description>The function dials on DialPad application with specified number. Well-behaved of Galaxy series, after closing ServiceMode screen, the screen of DialPad appear, and have to close in order to be back to this appication screen. The behavior of teh application is same as the way to dail manually on DialPad application, but on a lot of model of Galaxy, this does not work due to limitation of specifications.</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingDialNumber</classname>
          <defaultdescription>This will call the %dialnumber% for a dial app.</defaultdescription>
          <themecolor>-7667712</themecolor>
       </type>
       <type id="2" name="BROADCAST_SECRET_CODE">
          <title>Broadcast Secret Code</title>
-         <description>Will broadcast a secret code. And broadcast, refers to the simultaneous notification to the program that can be received by this terminal. Is how to call a general of the secret code, execution has been limited in many models.</description>
+         <description>The secret code will be broadcasted. The broadcast means that the appication (ShowServiceMode application) broadcasts to all listner programs (subscriber) in the mobilephone simultaneously. This is very popular approach, but on a lot of model of Galaxy, this does not work due to limitation of specifications.</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingBroadcastSecretCode</classname>
          <defaultdescription>Calls in %secretcode% broadcast a secret code.</defaultdescription>
          <themecolor>-16741632</themecolor>
       </type>
       <type id="3" name="DIRECTLY_CALL_ACTIVITY">
          <title>Directly Call Activity</title>
-         <description>This will directly call the activity class of the app. Method is a special call from the program. In some cases, you can also call "screen that can not be called manually." (If it exists function)</description>
+         <description>This function directly calls the activity class of the application. The method may be a specialized approach to call from the program. Depending on circumstances, you will be able to call the screen which cannot be called manually (If it exists function).</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingDirectlyCallActivity</classname>
          <defaultdescription>This will directly call the %class% class.</defaultdescription>
          <themecolor>-16777077</themecolor>
       </type>
       <type id="4" name="USSD_EXPLOIT_CALL">
          <title>USSD Exploit Call</title>
-         <description>Call the number, Using USSD Exploit. Hope an experimental feature, and it does not work on many models.</description>
+         <description>Call the number by using same technique of USSD Exploit. This is an experimental function, and I expect it doesn't work on many models (Again, in any cases, I will NOT be abe to take a responsibility, so please try to do this on your RISK)</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingUSSDExploitCall</classname>
          <defaultdescription>This will call the %dialnumber% for a dial app.</defaultdescription>
          <themecolor>-7632128</themecolor>
