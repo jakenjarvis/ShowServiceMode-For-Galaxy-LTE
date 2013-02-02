@@ -42,6 +42,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
+            <TextView
+                android:id="@+id/textNetworkType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/network_type"
+                android:textSize="@dimen/default_textsize_medium" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
             <Button
                 android:id="@+id/buttonAboutShowServiceMode"
                 android:layout_width="wrap_content"
@@ -53,7 +67,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow2"
+            android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -67,7 +81,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow3"
+            android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -78,7 +92,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow4"
+            android:id="@+id/tableRow5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -94,7 +108,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow5"
+            android:id="@+id/tableRow6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -108,7 +122,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow6"
+            android:id="@+id/tableRow7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -124,7 +138,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow7"
+            android:id="@+id/tableRow8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -138,7 +152,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow8"
+            android:id="@+id/tableRow9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -151,7 +165,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow9"
+            android:id="@+id/tableRow10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -164,7 +178,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow10"
+            android:id="@+id/tableRow11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -178,7 +192,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow11"
+            android:id="@+id/tableRow12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -192,7 +206,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow12"
+            android:id="@+id/tableRow13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -207,7 +221,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow13"
+            android:id="@+id/tableRow14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
@@ -222,7 +236,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow14"
+            android:id="@+id/tableRow15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 

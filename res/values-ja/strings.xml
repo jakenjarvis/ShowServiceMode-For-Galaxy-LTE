@@ -31,6 +31,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 
     <string name="menu_settings">Settings</string>
 
+    <string name="network_type">NetworkType:</string>
     <string name="description">ShowServiceModeは、標準で用意されている「シークレット画面」を素早く呼び出すためのアプリです。お使いの機種で正常に呼び出せるかどうかにかかわらず、複数の呼び出し方法を実装しています。</string>
     <string name="use_default_settings">お勧め設定を使う</string>
     <string name="button_execute_callservicemodeactivity">上記設定で呼び出し実行</string>

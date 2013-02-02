@@ -34,6 +34,7 @@ import com.google.android.vending.licensing.LicenseCheckerCallback;
 import com.google.android.vending.licensing.Obfuscator;
 import com.google.android.vending.licensing.Policy;
 import com.google.android.vending.licensing.ServerManagedPolicy;
+import com.tojc.ShowServiceMode.NetworkTypeManager;
 import com.tojc.ShowServiceMode.R;
 import com.tojc.ShowServiceMode.ShowServiceModeCore;
 import com.tojc.ShowServiceMode.Adapter.CallingMethodTypeListRowAdapter;
@@ -80,6 +81,7 @@ public class SettingActivity extends Activity implements OnItemSelectedListener
 	private static final int DIALOG_ID_INPUT_SHORTCUT_NAME = 4;
 
 	private ShowServiceModeCore core = null;
+	private NetworkTypeManager networkTypeManager = null;
 
 	private EditText edtInput = null;
 
@@ -215,6 +217,34 @@ public class SettingActivity extends Activity implements OnItemSelectedListener
             }
         	this.startAskYouFlg = false;
         }
+
+        //
+        final TextView textNetworkType = (TextView)this.findViewById(R.id.textNetworkType);
+		switch(this.core.getMachineInformation().getMode())
+		{
+			case Release:
+			case Free:
+				textNetworkType.setEnabled(true);
+				textNetworkType.setVisibility(View.VISIBLE);
+
+				this.networkTypeManager = new NetworkTypeManager(
+					this.getApplicationContext(),
+					new NetworkTypeManager.NetworkTypeChangedListener()
+				{
+					@Override
+					public void onNetworkTypeChanged(NetworkTypeManager manager)
+					{
+		        		String labelnetworktype = getString(R.string.network_type) + " " + manager.toString();
+		        		textNetworkType.setText(labelnetworktype);
+					}
+				});
+				break;
+
+			default:
+				textNetworkType.setEnabled(false);
+				textNetworkType.setVisibility(View.GONE);
+				break;
+		}
 
         //
         TextView description = (TextView)this.findViewById(R.id.ModelDescription);
