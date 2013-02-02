@@ -1,3 +1,12 @@
+■ShowServiceMode For Galaxy LTE Ver3.2.2
+・Added the display of NetworkType.
+・Added "Mobile network settings(phone.MobileNetworkSettings)" call type.
+・Added the existence check of ServiceMode for first boot. If ServiceMode does not exist, the default is 4001.
+・Fix English.
+・Upgraded the library, which is used internally.
+※ Thank you Mr.riki0081 for their cooperation.
+※ Thank you Mr.Masa for their cooperation.
+
 ■ShowServiceMode For Galaxy LTE Ver3.2.1
 ・Added "SKT Data Call Setting" type call.
 ・Added "GSM Status" type call.
