@@ -31,7 +31,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 
     <string name="menu_settings">Settings</string>
 
-    <string name="description">The "ShowServiceMode" is an application to be able to call "Secret Screen" quickly which are provided as standard maintenance menu. Regardless of whether or not you can call successfully on your models, this implements a lot of  method of multiple calls which can call.</string>
+    <string name="description">The "ShowServiceMode" is an application to be able to call "Secret Screen" quickly which are provided as standard maintenance menu. Regardless of whether or not you can call successfully on your models, this implements a lot of method of multiple calls which can call.</string>
     <string name="use_default_settings">Use the recommended setting</string>
     <string name="button_execute_callservicemodeactivity">Run with the above settings choosed</string>
     <string name="shortcut_message">When you create a shortcut on HOME screen, you will be able to open the screen with one touch from HOME screen. And also you will be able to make calls to multiple different ways.</string>
