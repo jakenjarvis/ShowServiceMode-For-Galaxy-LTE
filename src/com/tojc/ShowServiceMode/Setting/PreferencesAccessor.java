@@ -76,22 +76,6 @@ public class PreferencesAccessor
         Version versionThis = machineinfo.getVersionShowServiceMode();
 		String typeDefaultProcessingTypeName = machineinfo.getModelType().getTypeDefaultProcessingTypeName();
 
-		// TODO: 場当たり的な対応
-		// ServiceModeAppの存在有無でデフォルトを切り替える。
-		if(machineinfo.getModelType().getKeyId() == 0)
-		{
-			// UNKNOWN
-			PackageManager manager = this.contextApplication.getPackageManager();
-			try
-			{
-				ActivityInfo info = manager.getActivityInfo(new ComponentName("com.sec.android.app.servicemodeapp", "com.sec.android.app.servicemodeapp.ServiceModeApp"), 0);
-			}
-			catch(NameNotFoundException e)
-			{
-				typeDefaultProcessingTypeName = "DEF4001_DIRECTLY_CALL_ACTIVITY_RADIOINFO";
-			}
-		}
-
 		// set default
         Editor editer = sp.edit();
 		editer.putBoolean(PREFERENCE_FIRSTSTART, true);
