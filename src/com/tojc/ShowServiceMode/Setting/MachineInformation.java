@@ -28,7 +28,11 @@ package com.tojc.ShowServiceMode.Setting;
 import java.lang.reflect.Field;
 import java.util.Locale;
 import java.util.UUID;
+
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
 
@@ -114,7 +118,20 @@ public class MachineInformation
 
         //
 		this.modelType = this.modelTypeXmlManager.getItemFromNameNullToIndexZero(this.machineModel);
-        Log.i(this.getClass().getSimpleName(),"ModelType      : " + this.modelType.toDebugString());
+		// TODO: 場当たり的な対応
+		// ServiceModeAppの存在有無でデフォルトを切り替える。
+		// UNKNOWN
+		PackageManager manager = this.contextApplication.getPackageManager();
+		try
+		{
+			ActivityInfo info = manager.getActivityInfo(new ComponentName("com.sec.android.app.servicemodeapp", "com.sec.android.app.servicemodeapp.ServiceModeApp"), 0);
+		}
+		catch(NameNotFoundException e)
+		{
+			String typeDefaultProcessingTypeName = "DEF4001_DIRECTLY_CALL_ACTIVITY_RADIOINFO";
+			this.modelType.setTypeDefaultProcessingTypeName(typeDefaultProcessingTypeName);
+		}
+		Log.i(this.getClass().getSimpleName(),"ModelType      : " + this.modelType.toDebugString());
 
         //
         this.eventMulticaster = new EventMulticaster();
