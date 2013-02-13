@@ -18,7 +18,7 @@
 ・Bug fixes:The problem is, the display of list does not match contents in rare cases.
 ・Towards the manual registration of future freedom, has significantly improved its internal data structures.
 ・Organize name of call type, has changed dramatically with the display contents.
-・We like to display a description of the call type.
+・We prefer to display a description of the call type.
 ・In some models, to view the steps On/Off of LTE.
 ・Added support for SHV-E210S. Added a "DataNetworkMode" and "SKTHiddenMenu" type call accordingly.
 ・Added "Mobile Network Settings" type call.
