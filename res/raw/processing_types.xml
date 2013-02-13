@@ -35,7 +35,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
       </type>
       <type id="1" name="DIAL_NUMBER">
          <title>Dial Number</title>
-         <description>The function dials on DialPad application with specified number. Well-behaved of Galaxy series, after closing ServiceMode screen, the screen of DialPad appear, and have to close in order to be back to this appication screen. The behavior of teh application is same as the way to dail manually on DialPad application, but on a lot of model of Galaxy, this does not work due to limitation of specifications.</description>
+         <description>The function dials on DialPad application with specified number. Well-behaved of Galaxy series, after closing ServiceMode screen, the screen of DialPad appear, and have to close in order to be back to this appication screen. The behavior of the application is same as the way to dail manually on DialPad application, but on a lot of model of Galaxy, this does not work due to limitation of specifications.</description>
          <classname>com.tojc.ShowServiceMode.Processing.ProcessingDialNumber</classname>
          <defaultdescription>This will call the %dialnumber% for a dial app.</defaultdescription>
          <themecolor>-7667712</themecolor>
