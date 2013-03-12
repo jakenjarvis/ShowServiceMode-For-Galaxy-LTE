@@ -34,10 +34,10 @@ import com.google.android.vending.licensing.LicenseCheckerCallback;
 import com.google.android.vending.licensing.Obfuscator;
 import com.google.android.vending.licensing.Policy;
 import com.google.android.vending.licensing.ServerManagedPolicy;
-import com.tojc.ShowServiceMode.NetworkTypeManager;
 import com.tojc.ShowServiceMode.R;
 import com.tojc.ShowServiceMode.ShowServiceModeCore;
 import com.tojc.ShowServiceMode.Adapter.CallingMethodTypeListRowAdapter;
+import com.tojc.ShowServiceMode.Hide.NetworkTypeManager;
 import com.tojc.ShowServiceMode.Processing.ProcessingBase;
 import com.tojc.ShowServiceMode.Processing.TypeToInstance;
 import com.tojc.ShowServiceMode.Utility.ClipboardTextManager;
@@ -222,8 +222,9 @@ public class SettingActivity extends Activity implements OnItemSelectedListener
         final TextView textNetworkType = (TextView)this.findViewById(R.id.textNetworkType);
 		switch(this.core.getMachineInformation().getMode())
 		{
+			case BuildOwn:
 			case Release:
-			case Free:
+			//case Free:
 				textNetworkType.setEnabled(true);
 				textNetworkType.setVisibility(View.VISIBLE);
 

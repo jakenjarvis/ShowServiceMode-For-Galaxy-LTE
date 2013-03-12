@@ -21,9 +21,14 @@
 
 
 -dontwarn javax.xml.**
+
+-dontwarn com.tojc.ShowServiceMode.Hide.**
+
 -keepattributes Signature
 -keepattributes *Annotation*
+-keepattributes SourceFile, LineNumberTable
 -dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
 
 -keep public class javax.xml.** { *; }
 -keep class org.simpleframework.**{ *; }

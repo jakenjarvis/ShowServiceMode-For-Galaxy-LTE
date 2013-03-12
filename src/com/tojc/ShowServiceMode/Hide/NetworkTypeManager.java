@@ -1,4 +1,4 @@
-package com.tojc.ShowServiceMode;
+package com.tojc.ShowServiceMode.Hide;
 
 import android.content.Context;
 import android.telephony.PhoneStateListener;
@@ -31,7 +31,7 @@ public class NetworkTypeManager extends PhoneStateListener
 
 		this.listener = listener;
 
-		this.telephonyManager = (TelephonyManager)this.contextApplication.getSystemService("phone");
+		this.telephonyManager = (TelephonyManager)this.contextApplication.getSystemService(Context.TELEPHONY_SERVICE);
 		this.telephonyManager.listen(this, PhoneStateListener.LISTEN_DATA_CONNECTION_STATE);
 
 		getInfomation();
