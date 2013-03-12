@@ -1,3 +1,5 @@
+■ShowServiceMode For Galaxy LTE Ver3.2.3
+・ICS未満でエラーが発生する不具合を修正。
 ■ShowServiceMode For Galaxy LTE Ver3.2.2
 ・NetworkTypeの表示を追加しました。（テスト実装、有料版のみ、権限追加）
 ・呼び出しタイプ「モバイルネットワーク設定」を追加しました。
