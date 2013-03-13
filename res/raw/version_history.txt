@@ -1,5 +1,11 @@
+■ShowServiceMode For Galaxy LTE Ver3.2.4
+・Deleted the display of NetworkType. (Some models did not work.)
+
+■ShowServiceMode For Galaxy LTE Ver3.2.3
+・Fixed a bug that error occurs in less than ICS.
+
 ■ShowServiceMode For Galaxy LTE Ver3.2.2
-・Added the display of NetworkType.
+・Added the display of NetworkType. (Test implementation, Paid version only, Added permission)
 ・Added "Mobile network settings(phone.MobileNetworkSettings)" call type.
 ・Added the existence check of ServiceMode for first boot. If ServiceMode does not exist, the default is 4001.
 ・Fix English.

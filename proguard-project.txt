@@ -23,6 +23,7 @@
 -dontwarn javax.xml.**
 -keepattributes Signature
 -keepattributes *Annotation*
+-keepattributes SourceFile, LineNumberTable
 -dontskipnonpubliclibraryclasses
 
 -keep public class javax.xml.** { *; }
