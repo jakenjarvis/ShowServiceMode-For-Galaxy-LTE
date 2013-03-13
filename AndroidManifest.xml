@@ -26,13 +26,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tojc.ShowServiceMode"
-<<<<<<< HEAD
-    android:versionCode="9"
-    android:versionName="3.2.3" >
-=======
     android:versionCode="10"
     android:versionName="3.2.4" >
->>>>>>> Branch_Ver3.2.4
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -41,8 +36,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
 
     <!-- 気休め not signatureOrSystem -->
     <uses-permission android:name="com.sec.android.app.servicemodeapp.permission.KEYSTRING" />
