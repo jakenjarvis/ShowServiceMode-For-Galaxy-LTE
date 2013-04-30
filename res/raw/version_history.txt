@@ -1,3 +1,8 @@
+■ShowServiceMode For Galaxy LTE Ver3.2.5
+・Added support for S4(SHV-E300S,GT-I9500). Added a "RilServiceModeApp" type call accordingly.
+・Changed the existence check of ServiceMode for first boot.
+※ Thank you Mr.Toshi for their cooperation.
+
 ■ShowServiceMode For Galaxy LTE Ver3.2.4
 ・Deleted the display of NetworkType. (Some models did not work.)
 

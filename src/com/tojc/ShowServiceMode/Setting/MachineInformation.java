@@ -118,19 +118,12 @@ public class MachineInformation
 
         //
 		this.modelType = this.modelTypeXmlManager.getItemFromNameNullToIndexZero(this.machineModel);
-		// TODO: 場当たり的な対応
 		// ServiceModeAppの存在有無でデフォルトを切り替える。
-		// UNKNOWN
-		PackageManager manager = this.contextApplication.getPackageManager();
-		try
-		{
-			ActivityInfo info = manager.getActivityInfo(new ComponentName("com.sec.android.app.servicemodeapp", "com.sec.android.app.servicemodeapp.ServiceModeApp"), 0);
-		}
-		catch(NameNotFoundException e)
-		{
-			String typeDefaultProcessingTypeName = "DEF4001_DIRECTLY_CALL_ACTIVITY_RADIOINFO";
-			this.modelType.setTypeDefaultProcessingTypeName(typeDefaultProcessingTypeName);
-		}
+		String typeDefaultProcessingTypeName = ActivityExistsChecker.setDefaultProcessingTypeName(
+				this.contextApplication,
+				this.modelType.getTypeDefaultProcessingTypeName()
+				);
+		this.modelType.setTypeDefaultProcessingTypeName(typeDefaultProcessingTypeName);
 		Log.i(this.getClass().getSimpleName(),"ModelType      : " + this.modelType.toDebugString());
 
         //
