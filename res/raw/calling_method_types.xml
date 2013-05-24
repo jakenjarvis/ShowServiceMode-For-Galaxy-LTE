@@ -145,6 +145,43 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
          </parameter>
       </type>
 
+      <type id="3011" name="%default%">
+         <caption>%default%</caption>
+         <title>BAND SELECTION: RilServiceModeApp(2263)</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.RilServiceModeApp"/>
+             <property key="class" value="com.sec.android.RilServiceModeApp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="2263"/>
+         </parameter>
+      </type>
+      <type id="3012" name="%default%">
+         <caption>%default%</caption>
+         <title>MAIN MENU: RilServiceModeApp(197328640)</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.RilServiceModeApp"/>
+             <property key="class" value="com.sec.android.RilServiceModeApp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="197328640"/>
+         </parameter>
+      </type>
+      <type id="3013" name="%default%">
+         <caption>%default%</caption>
+         <title>PRX DRX Info: RilServiceModeApp(4238378)</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.RilServiceModeApp"/>
+             <property key="class" value="com.sec.android.RilServiceModeApp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="4238378"/>
+         </parameter>
+      </type>
+
       <type id="3101" name="%default%">
          <caption>%default%</caption>
          <title>SKT Hidden Menu: SKTHiddenMenuList</title>
@@ -223,6 +260,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
              <property key="package" value="com.android.phone"/>
              <property key="class" value="com.android.phone.MobileNetworkSettings"/>
              <property key="action" value="android.intent.action.MAIN"/>
+         </parameter>
+      </type>
+
+      <type id="4013" name="%default%">
+         <caption>%default%</caption>
+         <title>GSM Status: RilServiceModeApp(0011)</title>
+         <description>%default%</description>
+         <processingtypename>DIRECTLY_CALL_ACTIVITY</processingtypename>
+         <parameter specialkey="keyString">
+             <property key="package" value="com.sec.android.RilServiceModeApp"/>
+             <property key="class" value="com.sec.android.RilServiceModeApp.ServiceModeApp"/>
+             <property key="action" value="android.intent.action.MAIN"/>
+             <extraproperty key="keyString" value="0011"/>
          </parameter>
       </type>
 
